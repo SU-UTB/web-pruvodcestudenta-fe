@@ -10,7 +10,7 @@ const CityPickerWrapper = styled.div`
   border-radius: 25px;
 `
 
-const CitySelect = styled.div`
+const CitySelect = styled.div<{ left: boolean, selected: boolean }>`
   width: 200px;
   height: 60px;
 
@@ -26,7 +26,7 @@ const CitySelect = styled.div`
   align-items: center`;
 
 export const CityPicker = () => <CityPickerWrapper>
-    <CitySelect left>Zlin</CitySelect>
-    <CitySelect selected>Uherske Hradiste</CitySelect>
+    <CitySelect left={true} selected={false}>Zlin</CitySelect>
+    <CitySelect left={false} selected={true}>Uherske Hradiste</CitySelect>
 
 </CityPickerWrapper>;

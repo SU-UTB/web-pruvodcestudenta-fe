@@ -23,7 +23,7 @@ enum SocialType {
 
 interface ISocialItem {
     type: SocialType;
-    link: String;
+    link: string;
 }
 
 const SocialItems: Array<ISocialItem> = [

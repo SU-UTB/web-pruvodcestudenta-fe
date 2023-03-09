@@ -24,8 +24,8 @@ const AppLogoImage = styled.img`
 `;
 
 interface IHeaderItem {
-    title: String;
-    link: String;
+    title: string;
+    link: string;
 
 }
 

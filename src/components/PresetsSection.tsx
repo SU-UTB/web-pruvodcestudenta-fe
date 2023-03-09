@@ -57,9 +57,13 @@ const PresetWrapper = styled.div`
   align-items: center;
 `
 
-const Preset = ({preset}) => {
+interface IPreset {
+    p: string
+}
+
+const Preset = (preset: IPreset) => {
     return (<PresetWrapper>
-        <p> {preset}</p>
+        <p> {preset.p}</p>
     </PresetWrapper>)
 }
 
@@ -72,7 +76,7 @@ export const PresetsSection = () => {
                 <p>Přečti si vše důležité o UTB zde.</p>
             </HeaderWrapper>
             <PresetsWrapper>
-                {Presets.map(p => <Preset preset={p}/>)}
+                {Presets.map(p => <Preset p={p}/>)}
             </PresetsWrapper>
             <MoreWrapper>
                 <p>Vice</p>
