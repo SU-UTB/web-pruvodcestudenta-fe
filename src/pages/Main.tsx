@@ -5,6 +5,7 @@ import {SearchSection} from "../components/SearchSection";
 import {PageDivider} from "../components/PageDivider";
 import {Page} from "../components/Page";
 import {PresetsSection} from "../components/PresetsSection";
+import {RectorSection} from "../components/RectorSection";
 
 const Main = () => {
     return (
@@ -14,6 +15,8 @@ const Main = () => {
             <SearchSection/>
             <PageDivider/>
             <PresetsSection/>
+            <PageDivider/>
+            <RectorSection/>
             {/*
             <Footer/>
 */}
