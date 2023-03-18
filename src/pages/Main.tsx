@@ -1,14 +1,26 @@
-import React from "react";
-import Footer from "../components/molecules/Footer";
-import Header from "../components/molecules/Header";
+import Header from "../components/Header";
+import {Splash} from "../components/main/splash/Splash";
+import {SearchSection} from "../components/main/search/SearchSection";
+import {PageDivider} from "../components/PageDivider";
+import {Page} from "../components/Page";
+import {PresetsSection} from "../components/main/presets/PresetsSection";
+import {RectorSection} from "../components/main/rector/RectorSection";
 
 const Main = () => {
-  return (
-    <>
-      <Header></Header>
-      <Footer></Footer>
-    </>
-  );
+    return (
+        <Page>
+            <Header/>
+            <Splash/>
+            <SearchSection/>
+            <PageDivider/>
+            <PresetsSection/>
+            <PageDivider/>
+            <RectorSection/>
+            {/*
+            <Footer/>
+*/}
+        </Page>
+    );
 };
 
 export default Main;
