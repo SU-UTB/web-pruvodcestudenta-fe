@@ -6,7 +6,6 @@ const CityPickerWrapper = styled.div`
   width: 400px;
   height: 60px;
   display: flex;
-  flex-direction: row;
   background-color: #FFCBAB;
   border-radius: 25px;
   color: black;

@@ -1,4 +1,3 @@
-import React from "react";
 import {PresetsSectionWrapper} from "./PresetsSectionWrapper";
 import {PresetsWrapper} from "./PresetsWrapper";
 import {PresetsMore} from "./more/PresetsMore";
@@ -25,7 +24,7 @@ export const PresetsSection = () => {
         <PresetsSectionWrapper>
             <PresetsHeader/>
             <PresetsWrapper>
-                {Presets.map(p => <Preset p={p}/>)}
+                {Presets.map((p, i) => <Preset key={i.toString()} p={p}/>)}
             </PresetsWrapper>
             <PresetsMore/>
         </PresetsSectionWrapper>

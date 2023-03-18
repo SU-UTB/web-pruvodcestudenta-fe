@@ -1,4 +1,3 @@
-import React from "react";
 import {RectorTextWrapper} from "./RectorTextWrapper";
 
 export const RectorText = () => {

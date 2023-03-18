@@ -13,5 +13,5 @@ const PickedTags = [
 
 
 export const SearchTags = () => <SearchTagsWrapper>
-    {PickedTags.map(t => <SearchTag>{t}</SearchTag>)}
+    {PickedTags.map((t, i) => <SearchTag key={i.toString()}>{t}</SearchTag>)}
 </SearchTagsWrapper>

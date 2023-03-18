@@ -1,5 +1,5 @@
 import {PresetWrapper} from "./PresetWrapper";
-import React from "react";
+
 import {PresetP} from "./PresetP";
 
 

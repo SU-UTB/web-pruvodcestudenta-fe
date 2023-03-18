@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const PresetsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 21px;

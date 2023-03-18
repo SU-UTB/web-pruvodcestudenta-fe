@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components';
 import utb from '../assets/icons/utb.svg';
 import {Socials} from "./Socials";
@@ -11,7 +10,6 @@ const HeaderWrapper = styled.header
       width: 100vw;
       background-color: white;
       display: flex;
-      flex-direction: row;
       align-items: center;
     `
 const HeaderItem = styled.a`
@@ -38,7 +36,6 @@ const AppLogo = styled.div`
   margin-right: auto;
   margin-left: 60px;
   display: flex;
-  flex-direction: row;
 `
 
 const Header = () => {

@@ -6,7 +6,6 @@ import youtube from '../assets/icons/youtube.svg';
 
 const SocialsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   margin-right: 60px;
   align-items: center;
 `
@@ -27,7 +26,7 @@ interface ISocialItem {
     alt: string;
 }
 
-const SocialItems: Array<ISocialItem> = [
+const SocialItems: ISocialItem[] = [
     {type: SocialType.instagram, link: "https://www.instagram.com/utbzlin/?hl=cs", alt: 'instagram_link'},
     {type: SocialType.facebook, link: "https://www.facebook.com/UTBZlin", alt: 'facebook_link'},
     {type: SocialType.youtube, link: "https://www.youtube.com/c/univerzitatomasebativezline", alt: 'youtube_link'}
@@ -46,7 +45,7 @@ function getImage(type: SocialType) {
 }
 
 export const Socials = () => <SocialsWrapper>
-    {SocialItems.map(s => <a key={s.type} href={s.link}>
-        <SocialImage src={getImage(s.type)} alt={s.alt}></SocialImage>
+    {SocialItems.map(({type, link, alt}) => <a key={type.toString()} href={link}>
+        <SocialImage src={getImage(type)} alt={alt}></SocialImage>
     </a>)}
 </SocialsWrapper>;

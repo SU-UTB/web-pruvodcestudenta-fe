@@ -1,4 +1,3 @@
-import React from "react";
 import {CityPicker} from "../../CityPicker";
 import {Divider} from "../../Divider";
 import {SplashWrapper} from "./SplashWrapper";

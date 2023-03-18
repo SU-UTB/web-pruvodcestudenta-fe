@@ -5,11 +5,14 @@ const PageWrapper = styled.div`
   flex-direction: column;
   width: 100vw`;
 
-// @ts-ignore
-export const Page = (props) => {
-    return (<PageWrapper>
-        {
-            props.children
-        }
-    </PageWrapper>);
+interface Props {
+    children: React.ReactNode;
+}
+
+export const Page = ({children}: Props) => {
+    return (
+        <>
+            {children}
+        </>
+    );
 }

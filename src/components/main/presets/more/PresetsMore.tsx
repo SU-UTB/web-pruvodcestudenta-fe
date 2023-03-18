@@ -1,5 +1,4 @@
 import arrow_down from "../../../../assets/icons/arrow_down.svg";
-import React from "react";
 import {Divider} from "../../../Divider";
 import {MoreWrapper} from "./MoreWrapper";
 import {MoreText} from "./MoreText";
