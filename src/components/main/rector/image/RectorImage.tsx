@@ -4,5 +4,5 @@ import {RectorImageWrapper} from "./RectorImageWrapper";
 
 
 export const RectorImage = () => {
-    return (<RectorImageWrapper src={rector}/>)
+    return (<RectorImageWrapper src={rector} alt='rector'/>)
 }

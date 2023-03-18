@@ -24,12 +24,13 @@ enum SocialType {
 interface ISocialItem {
     type: SocialType;
     link: string;
+    alt: string;
 }
 
 const SocialItems: Array<ISocialItem> = [
-    {type: SocialType.instagram, link: "https://www.instagram.com/utbzlin/?hl=cs"},
-    {type: SocialType.facebook, link: "https://www.facebook.com/UTBZlin"},
-    {type: SocialType.youtube, link: "https://www.youtube.com/c/univerzitatomasebativezline"}
+    {type: SocialType.instagram, link: "https://www.instagram.com/utbzlin/?hl=cs", alt: 'instagram_link'},
+    {type: SocialType.facebook, link: "https://www.facebook.com/UTBZlin", alt: 'facebook_link'},
+    {type: SocialType.youtube, link: "https://www.youtube.com/c/univerzitatomasebativezline", alt: 'youtube_link'}
 ]
 
 function getImage(type: SocialType) {
@@ -46,6 +47,6 @@ function getImage(type: SocialType) {
 
 export const Socials = () => <SocialsWrapper>
     {SocialItems.map(s => <a key={s.type} href={s.link}>
-        <SocialImage src={getImage(s.type)}></SocialImage>
+        <SocialImage src={getImage(s.type)} alt={s.alt}></SocialImage>
     </a>)}
 </SocialsWrapper>;

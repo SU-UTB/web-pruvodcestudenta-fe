@@ -44,7 +44,7 @@ const AppLogo = styled.div`
 const Header = () => {
     return <HeaderWrapper>
         <AppLogo>
-            <AppLogoImage src={utb}/>
+            <AppLogoImage src={utb} alt='utb_logo'/>
             {AppName}
         </AppLogo>
         {HeaderItems.map(i => <HeaderItem key={i.title} href={i.link}>{i.title}</HeaderItem>)}
