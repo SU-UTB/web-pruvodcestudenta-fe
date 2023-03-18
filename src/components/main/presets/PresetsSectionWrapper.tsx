@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PresetsSectionWrapper = styled.div`
+export const PresetsSectionWrapper = styled.section`
   width: 100vw;
   display: flex;
   justify-content: center;
