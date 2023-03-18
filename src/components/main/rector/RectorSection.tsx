@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import rector from '../assets/images/rector.jpg';
+import rector from '../../../assets/images/rector.jpg';
 
 const RectorSectionWrapper = styled.div`
   width: 100vw;

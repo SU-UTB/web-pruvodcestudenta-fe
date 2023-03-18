@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {CityPicker} from "./CityPicker";
+import {CityPicker} from "../../CityPicker";
+import {Divider} from "../../Divider";
 
 
 const SplashWrapper = styled.section`
@@ -20,8 +21,6 @@ const H1 = styled.h1`
   font-size: 62px;`
 
 
-const Divider = styled.div<{ height: number }>`
-  height: ${props => props.height}px`
 
 export const Splash = () => <SplashWrapper>
     <Divider height={127}/>
