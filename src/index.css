@@ -3,103 +3,97 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: CabinetGroteskBlack;
-  src: url('./assets/fonts/CabinetGrotesk-Black.woff2') format('woff2');
-  font-weight: 900;
+    font-family: Satoshi;
+    src: url('./assets/fonts/Satoshi-Black.woff2') format('woff2');
+    font-weight: 900;
 }
 
 @font-face {
-  font-family: CabinetGroteskExtraBold;
-  src: url('./assets/fonts/CabinetGrotesk-Extrabold.woff2') format('woff2');
-  font-weight: 800;
+    font-family: Satoshi;
+    src: url('./assets/fonts/Satoshi-Bold.woff2') format('woff2');
+    font-weight: 700;
 }
 
 @font-face {
-  font-family: CabinetGroteskBold;
-  src: url('./assets/fonts/CabinetGrotesk-Bold.woff2') format('woff2');
-  font-weight: 700;
+    font-family: Satoshi;
+    src: url('./assets/fonts/Satoshi-Medium.woff2') format('woff2');
+    font-weight: 500;
 }
 
 @font-face {
-  font-family: CabinetGroteskMedium;
-  src: url('./assets/fonts/CabinetGrotesk-Medium.woff2') format('woff2');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: CabinetGroteskRegular;
-  src: url('./assets/fonts/CabinetGrotesk-Regular.woff2') format('woff2');
-  font-weight: 400;
+    font-family: CabinetGroteskRegular;
+    src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
+    font-weight: 400;
 }
 
 html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	color: #391F68;
-	font-family: CabinetGroteskRegular;
-	font-size: 18px;
-	font-display: swap;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #391F68;
+    font-family: Satoshi;
+    font-size: 18px;
+    font-display: swap;
 }
 
 main {
-	/* margin top value depends on the height of the header with navbar */
-	margin-top: 4rem; 
+    /* margin top value depends on the height of the header with navbar */
+    margin-top: 4rem;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a {
-	font-family: CabinetGroteskBold;
-	letter-spacing: 0.01em;
+    font-family: CabinetGroteskBold;
+    letter-spacing: 0.01em;
 }
 
 input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-padding: 0.4em 0;
+    padding: 0.4em;
+    margin: 0 0 0.5em 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
 .txt-extrabold {
-	font-family: CabinetGroteskExtraBold;
-	letter-spacing: 0.04em;
+    font-family: CabinetGroteskExtraBold;
+    letter-spacing: 0.04em;
 }
 
 .txt-bold {
-	font-family: CabinetGroteskBold;
-	letter-spacing: 0.01em;
+    font-family: CabinetGroteskBold;
+    letter-spacing: 0.01em;
 }
 
 .txt-medium {
-	font-family: CabinetGroteskMedium;
+    font-family: CabinetGroteskMedium;
 }
 
 .txt-normal {
-	font-family: CabinetGroteskRegular;
+    font-family: CabinetGroteskRegular;
 }
 
 .section-heading {
-	font-family: CabinetGroteskBold;
-	letter-spacing: 0.01em;
-	font-size: 46px;
+    font-family: CabinetGroteskBold;
+    letter-spacing: 0.01em;
+    font-size: 46px;
 }
 
 ol {
-	list-style: decimal;
-	margin: auto;
-	padding-left: 2rem;
+    list-style: decimal;
+    margin: auto;
+    padding-left: 2rem;
 }
