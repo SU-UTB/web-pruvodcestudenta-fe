@@ -10,13 +10,24 @@ const SplashWrapper = styled.div`
   background-color: #FF9F63;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  color: white;
 `
 
+const H1 = styled.h1`
+  font-style: normal;
+  font-weight: 900;
+  font-size: 62px;`
+
+
+const Divider = styled.div<{ height: number }>`
+  height: ${props => props.height}px`
+
 export const Splash = () => <SplashWrapper>
-    <h1>Průvodce studenta splash screen</h1>
+    <Divider height={127}/>
+    <H1>Průvodce studenta splash screen</H1>
+    <Divider height={17}/>
     <p>Průvodce studenta UTB ti rychle pomůže zorientovat se na nové vysoké škole.</p>
-    <br/>
+    <Divider height={67}/>
     <CityPicker/>
 </SplashWrapper>
