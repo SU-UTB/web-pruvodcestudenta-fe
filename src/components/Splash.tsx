@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {CityPicker} from "./CityPicker";
 
 
-const SplashWrapper = styled.div`
+const SplashWrapper = styled.section`
 
   height: 540px;
   width: 100vw;
