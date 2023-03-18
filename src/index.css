@@ -37,63 +37,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #391F68;
-    font-family: Satoshi;
-    font-size: 18px;
-    font-display: swap;
+    font-family: Satoshi, serif;
 }
 
-main {
-    /* margin top value depends on the height of the header with navbar */
-    margin-top: 4rem;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a {
-    font-family: CabinetGroteskBold;
-    letter-spacing: 0.01em;
-}
-
-input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    -webkit-padding: 0.4em 0;
-    padding: 0.4em;
-    margin: 0 0 0.5em 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-}
-
-.txt-extrabold {
-    font-family: CabinetGroteskExtraBold;
-    letter-spacing: 0.04em;
-}
-
-.txt-bold {
-    font-family: CabinetGroteskBold;
-    letter-spacing: 0.01em;
-}
-
-.txt-medium {
-    font-family: CabinetGroteskMedium;
-}
-
-.txt-normal {
-    font-family: CabinetGroteskRegular;
-}
-
-.section-heading {
-    font-family: CabinetGroteskBold;
-    letter-spacing: 0.01em;
-    font-size: 46px;
-}
-
-ol {
-    list-style: decimal;
-    margin: auto;
-    padding-left: 2rem;
-}
+§
