@@ -9,4 +9,5 @@ export const SearchTag = styled.div`
   align-items: center;
   justify-content: center;
   border: 0.5px solid #c1c1c1;
+  cursor: pointer;
 `
