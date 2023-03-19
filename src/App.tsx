@@ -1,8 +1,10 @@
-import { useState } from "react";
-import Main from "./pages/Main";
+import {BrowserRouter} from "react-router-dom";
+import {Routes} from "./Routes";
 
 function App() {
-  return <Main></Main>;
+    return <BrowserRouter>
+        <Routes/>
+    </BrowserRouter>;
 }
 
 export default App;
