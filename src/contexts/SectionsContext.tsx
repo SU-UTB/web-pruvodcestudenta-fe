@@ -5,7 +5,7 @@ Used only because of missing api
 
 import {createContext} from 'react';
 
-interface ISection {
+export interface ISection {
     title: string
     link: string,
     bgColor: string,

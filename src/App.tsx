@@ -1,27 +1,25 @@
 import {BrowserRouter} from "react-router-dom";
 import {Routes} from "./Routes";
-import {SectionsContext} from "./contexts/SectionsContext";
-import {ITile} from "./components/tiles/Tile";
+import {ISection, SectionsContext} from "./contexts/SectionsContext";
 import {useState} from "react";
 
 
-const PresetSections: ITile[] = [
+const PresetSections: ISection[] = [
     {
-        link: "zivot-ve-zline",
-        title: "Život ve Zlíně",
+        link: "prakticke-rady",
+        title: "Praktické rady",
         bgColor: "#FDA6A4",
-        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
+        description: "Něco random o tom jaké systémy, věci, lifehacky na univerzitě provozujeme, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
     }, {
-        link: "fakulty",
-        title: "Fakulty a další součásti UTB",
+        link: "prakticke-rady",
+        title: "Praktické rady",
         bgColor: "#FDA6A4",
-        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
-
+        description: "Něco random o tom jaké systémy, věci, lifehacky na univerzitě provozujeme, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
     }, {
-        link: "studentske-organizace",
-        title: "Studentské organizace",
+        link: "prakticke-rady",
+        title: "Praktické rady",
         bgColor: "#FDA6A4",
-        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
+        description: "Něco random o tom jaké systémy, věci, lifehacky na univerzitě provozujeme, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
     }
 ];
 
