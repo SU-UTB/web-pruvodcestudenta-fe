@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const MoreContentsWrapper = styled.section`
+export const MoreContentsGridWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 21px;
   margin-left: 100px;
   margin-right: 100px;

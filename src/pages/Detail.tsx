@@ -7,6 +7,7 @@ import {Description} from "../components/detail/description/Description";
 import {MoreContents} from "../components/contents/MoreContents";
 import {BackButton} from "../components/buttons/BackButton";
 import {TopicsContext} from "../contexts/TopicsContext";
+import {PageDivider} from "../components/PageDivider";
 
 export const Detail = () => {
     const {detail} = useParams();
@@ -18,7 +19,8 @@ export const Detail = () => {
         <Header/>
         <Splash sectionBgColor={topic!.bgColor} title={topic!.title}/>
         <Description description={topic!.description}/>
-        <MoreContents data={topics}/>
+        <PageDivider/>
+        <MoreContents data={topics} canReplace={true}/>
         <BackButton/>
     </Page>)
 }

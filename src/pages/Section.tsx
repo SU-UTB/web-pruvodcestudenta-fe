@@ -8,6 +8,7 @@ import {Description} from "../components/section/description/Description";
 import {MoreContents} from "../components/contents/MoreContents";
 import {BackButton} from "../components/buttons/BackButton";
 import {TopicsContext} from "../contexts/TopicsContext";
+import {PageDivider} from "../components/PageDivider";
 
 export const Section = () => {
     const {id} = useParams();
@@ -20,6 +21,7 @@ export const Section = () => {
         <Header/>
         <Splash sectionBgColor={section!.bgColor} title={section!.title}/>
         <Description description={section!.description}/>
+        <PageDivider/>
         <MoreContents data={topics}/>
         <BackButton/>
     </Page>)

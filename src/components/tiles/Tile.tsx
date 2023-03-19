@@ -8,12 +8,14 @@ export interface ITile {
     prefix: string
     title: string
     link: string
+    canReplace?: boolean
 }
 
 export const Tile = (props: ITile) => {
 
     return (
-        <Link to={`${props.prefix}/${props.link}`}>
+        //TODO replace?
+        <Link to={`${props.prefix}/${props.link}`} replace={props.canReplace}>
             <TileWrapper>
                 <TileP> {props.title}</TileP>
             </TileWrapper>
