@@ -11,4 +11,6 @@ export const TileWrapper = styled.div`
   align-items: center;
   background: #FFDEC9 url(${orange}) no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
+  color: black;
+  text-decoration: none;
 `
