@@ -5,18 +5,17 @@ import {TileP} from "./TileP";
 
 
 export interface ITile {
+    prefix: string
     title: string
-    link: string,
-    bgColor: string,
-    description: string
+    link: string
 }
 
-export const Tile = (preset: ITile) => {
+export const Tile = (props: ITile) => {
 
     return (
-        <Link to={`sections/${preset.link}`}>
+        <Link to={`${props.prefix}/${props.link}`}>
             <TileWrapper>
-                <TileP> {preset.title}</TileP>
+                <TileP> {props.title}</TileP>
             </TileWrapper>
 
         </Link>)
