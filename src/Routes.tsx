@@ -1,10 +1,10 @@
 import {Route, Routes as RouterRoutes} from "react-router-dom";
 import Main from "./pages/Main";
-import {Detail} from "./pages/Detail";
+import {Section} from "./pages/Section";
 
 export const Routes = () => {
     return (<RouterRoutes>
         <Route index path="/" element={<Main/>}/>
-        <Route path="/detail" element={<Detail/>}/>
+        <Route path="/sections/:id" element={<Section/>}/>
     </RouterRoutes>)
 }
