@@ -5,8 +5,9 @@ import {TileP} from "./TileP";
 
 
 export interface ITile {
-    p: string
-    link: string
+    title: string
+    link: string,
+    bgColor: string
 }
 
 export const Tile = (preset: ITile) => {
@@ -14,7 +15,7 @@ export const Tile = (preset: ITile) => {
     return (
         <Link to={`sections/${preset.link}`}>
             <TileWrapper>
-                <TileP> {preset.p}</TileP>
+                <TileP> {preset.title}</TileP>
             </TileWrapper>
 
         </Link>)
