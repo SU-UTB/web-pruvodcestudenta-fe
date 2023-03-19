@@ -7,7 +7,8 @@ import {TileP} from "./TileP";
 export interface ITile {
     title: string
     link: string,
-    bgColor: string
+    bgColor: string,
+    description: string
 }
 
 export const Tile = (preset: ITile) => {

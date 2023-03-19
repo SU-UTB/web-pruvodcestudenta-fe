@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import {Splash} from "../components/section/splash/Splash";
 import {useContext} from "react";
 import {SectionsContext} from "../contexts/SectionsContext";
+import {Description} from "../components/section/description/Description";
 
 export const Section = () => {
     const {id} = useParams();
@@ -14,5 +15,6 @@ export const Section = () => {
     return (<Page>
         <Header/>
         <Splash sectionBgColor={section!.bgColor} title={section!.title}/>
+        <Description description={section!.description}/>
     </Page>)
 }

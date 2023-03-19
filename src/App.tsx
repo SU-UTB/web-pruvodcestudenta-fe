@@ -9,15 +9,19 @@ const PresetSections: ITile[] = [
     {
         link: "zivot-ve-zline",
         title: "Život ve Zlíně",
-        bgColor: "#FDA6A4"
+        bgColor: "#FDA6A4",
+        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
     }, {
         link: "fakulty",
         title: "Fakulty a další součásti UTB",
-        bgColor: "#FDA6A4"
+        bgColor: "#FDA6A4",
+        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
+
     }, {
         link: "studentske-organizace",
         title: "Studentské organizace",
-        bgColor: "#FDA6A4"
+        bgColor: "#FDA6A4",
+        description: "Něco random o tom jak se ve zlíně žije bych tady napsal, něco jakoby možná vlastně smysluplného a zajímavého co tu nebude 2x nakopírované aby to bylo dost dlouhé."
     }
 ];
 
