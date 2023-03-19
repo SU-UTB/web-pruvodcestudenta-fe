@@ -4,17 +4,15 @@ Used only because of missing api
 */
 
 import {createContext} from 'react';
+import {IContent} from "../components/contents/MoreContents";
 
 
-interface IContent {
-    title: string
-    link: string,
-    bgColor: string,
-    description: string
+interface ITopic extends IContent {
+
 }
 
 //TODO api - testing purpose
-export const ContentsData: IContent[] = [
+export const ContentsData: ITopic[] = [
     {
         title: 'Studijní systém STAG',
         link: 'stag',
@@ -56,5 +54,5 @@ export const ContentsData: IContent[] = [
             "- Vyskytne-li se někdy technický problém s chodem Portálu UTB, neváhej a napiš nám na helpdeskstag@utb.cz nebo portal@utb.cz. Do zprávy uveď minimálně své osobní číslo (např. A10123), ať Tě můžeme jednoduše dohledat. Do zprávy nikdy neuváděj rodné číslo."
     }
 ];
-const defaultVal: IContent[] = [];
-export const ContentsContext = createContext(defaultVal);
+const defaultVal: ITopic[] = [];
+export const TopicsContext = createContext(defaultVal);

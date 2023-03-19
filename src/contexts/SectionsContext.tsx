@@ -4,12 +4,9 @@ Used only because of missing api
 */
 
 import {createContext} from 'react';
+import {IContent} from "../components/contents/MoreContents";
 
-export interface ISection {
-    title: string
-    link: string,
-    bgColor: string,
-    description: string
+interface ISection extends IContent {
 }
 
 export const PresetSectionsData: ISection[] = [

@@ -1,16 +1,16 @@
 import {BrowserRouter} from "react-router-dom";
 import {Routes} from "./Routes";
 import {PresetSectionsData, SectionsContext} from "./contexts/SectionsContext";
-import {ContentsContext, ContentsData} from "./contexts/ContentsContext";
+import {ContentsData, TopicsContext} from "./contexts/TopicsContext";
 
 
 function App() {
     return (<SectionsContext.Provider value={PresetSectionsData}>
-        <ContentsContext.Provider value={ContentsData}>
+        <TopicsContext.Provider value={ContentsData}>
             <BrowserRouter>
                 <Routes/>
             </BrowserRouter>
-        </ContentsContext.Provider>
+        </TopicsContext.Provider>
     </SectionsContext.Provider>);
 }
 
