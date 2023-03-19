@@ -8,6 +8,7 @@ interface IContent {
     description: string
 }
 
+//TODO api - testing purpose
 const contents: IContent[] = [
     {
         title: 'Studijní systém STAG',
