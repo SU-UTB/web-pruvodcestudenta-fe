@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import orange from "../../../../assets/images/tables/orange.svg"
+import orange from "../../assets/images/tables/orange.svg"
 
-export const PresetWrapper = styled.div`
+export const TileWrapper = styled.div`
   width: 258px;
   height: 258px;
   border-radius: 8px;
