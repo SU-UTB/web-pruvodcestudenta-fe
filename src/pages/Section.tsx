@@ -1,11 +1,11 @@
 import {Page} from "../components/Page";
 import Header from "../components/Header";
 import {useParams} from "react-router-dom";
-import {Splash} from "../components/section/splash/Splash";
+import {Splash} from "../components/splash/Splash";
 import {useContext} from "react";
 import {SectionsContext} from "../contexts/SectionsContext";
 import {Description} from "../components/section/description/Description";
-import {Contents} from "../components/section/contents/Contents";
+import {Contents} from "../components/contents/Contents";
 import {BackButton} from "../components/buttons/BackButton";
 
 export const Section = () => {
