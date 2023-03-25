@@ -2,14 +2,8 @@ import {MoreContentsWrapper} from "./MoreContentsWrapper";
 import {Tile} from "../tiles/Tile";
 import {MoreContentsTitle} from "./MoreContentsTitle";
 import {MoreContentsGridWrapper} from "./MoreContentsGridWrapper";
+import {IContent} from "../../shared/IContent";
 
-
-export interface IContent {
-    title: string
-    link: string,
-    bgColor: string,
-    description: string
-}
 
 interface IContentsData<T extends IContent> {
     data: Array<T>
