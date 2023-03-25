@@ -1,4 +1,4 @@
-import {DescriptionWrapper} from "./DescriptionWrapper";
+import {DescriptionWrapper} from "./DescriptionWrapper.styled";
 
 interface IDescription {
     description: string

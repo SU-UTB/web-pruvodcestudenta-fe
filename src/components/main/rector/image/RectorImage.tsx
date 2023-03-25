@@ -1,6 +1,6 @@
 import rector from "../../../../assets/images/rector.jpg";
 
-import {RectorImageWrapper} from "./RectorImageWrapper";
+import {RectorImageWrapper} from "./RectorImageWrapper.styled";
 
 
 export const RectorImage = () => {

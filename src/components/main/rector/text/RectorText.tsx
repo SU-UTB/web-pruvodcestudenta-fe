@@ -1,4 +1,4 @@
-import {RectorTextWrapper} from "./RectorTextWrapper";
+import {RectorTextWrapper} from "./RectorTextWrapper.styled";
 
 export const RectorText = () => {
     return (<RectorTextWrapper>

@@ -1,4 +1,4 @@
-import {DescriptionWrapper} from "./DescriptionWrapper";
+import {DescriptionWrapper} from "./DescriptionWrapper.styled";
 import styled from "styled-components";
 
 interface IDescription {

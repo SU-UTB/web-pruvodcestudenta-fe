@@ -1,5 +1,5 @@
-import {SplashWrapper} from "./SplashWrapper";
-import {SplashTitle} from "./SplashTitle";
+import {SplashWrapper} from "./SplashWrapper.styled";
+import {SplashH6} from "./SplashH6.styled";
 
 
 interface ISplash {
@@ -9,7 +9,7 @@ interface ISplash {
 
 export const Splash = (props: ISplash) => {
     return <SplashWrapper backgroundColor={props.sectionBgColor}>
-        <SplashTitle>{props.title}</SplashTitle>
+        <SplashH6>{props.title}</SplashH6>
     </SplashWrapper>
 
 }

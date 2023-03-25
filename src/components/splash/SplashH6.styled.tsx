@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SplashTitle = styled.h6`
+export const SplashH6 = styled.h6`
   font-style: normal;
   font-weight: 700;
   font-size: 36px;

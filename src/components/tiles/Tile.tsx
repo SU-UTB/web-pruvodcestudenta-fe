@@ -1,7 +1,7 @@
-import {TileWrapper} from "./TileWrapper";
+import {TileWrapper} from "./TileWrapper.styled";
 import {Link} from 'react-router-dom';
 
-import {TileP} from "./TileP";
+import {TileP} from "./TileP.styled";
 
 
 export interface ITile {

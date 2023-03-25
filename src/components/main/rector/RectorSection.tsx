@@ -1,6 +1,6 @@
 import {RectorText} from "./text/RectorText";
 import {RectorImage} from "./image/RectorImage";
-import {RectorSectionWrapper} from "./RectorSectionWrapper";
+import {RectorSectionWrapper} from "./RectorSectionWrapper.styled";
 
 
 export const RectorSection = () => {

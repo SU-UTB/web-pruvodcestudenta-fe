@@ -1,7 +1,7 @@
-import {MoreContentsWrapper} from "./MoreContentsWrapper";
+import {MoreContentsWrapper} from "./MoreContentsWrapper.styled";
 import {Tile} from "../tiles/Tile";
 import {MoreContentsTitle} from "./MoreContentsTitle";
-import {MoreContentsGridWrapper} from "./MoreContentsGridWrapper";
+import {MoreContentsGridWrapper} from "./MoreContentsGridWrapper.styled";
 import {IContent} from "../../interfaces/IContent";
 
 

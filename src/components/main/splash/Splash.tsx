@@ -1,7 +1,7 @@
 import {CityPicker} from "../../CityPicker";
 import {Divider} from "../../Divider";
-import {SplashWrapper} from "./SplashWrapper";
-import {SplashH1} from "./SplashH1";
+import {SplashWrapper} from "./SplashWrapper.styled";
+import {SplashH1} from "./SplashH1.styled";
 
 
 export const Splash = () => <SplashWrapper>

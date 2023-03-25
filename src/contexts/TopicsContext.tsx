@@ -4,7 +4,7 @@ Used only because of missing api
 */
 
 import {createContext} from 'react';
-import {IContent} from "../components/contents/MoreContents";
+import {IContent} from "../interfaces/IContent";
 
 
 interface ITopic extends IContent {

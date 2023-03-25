@@ -8,7 +8,7 @@ export const DescriptionWrapper = styled.section`
   border: 0.5px solid #E1E1E1;
   /* shadow drop try */
 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 
   padding: 36px;
