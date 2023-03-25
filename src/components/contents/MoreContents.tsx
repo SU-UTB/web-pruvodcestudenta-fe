@@ -2,7 +2,7 @@ import {MoreContentsWrapper} from "./MoreContentsWrapper";
 import {Tile} from "../tiles/Tile";
 import {MoreContentsTitle} from "./MoreContentsTitle";
 import {MoreContentsGridWrapper} from "./MoreContentsGridWrapper";
-import {IContent} from "../../shared/IContent";
+import {IContent} from "../../interfaces/IContent";
 
 
 interface IContentsData<T extends IContent> {
