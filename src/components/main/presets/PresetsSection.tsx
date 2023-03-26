@@ -3,20 +3,22 @@ import {PresetsWrapper} from "./PresetsWrapper";
 import {PresetsMore} from "./more/PresetsMore";
 import {Tile} from "../../tiles/Tile";
 import {PresetsHeader} from "./header/PresetsHeader";
-import {useContext} from "react";
-import {SectionsContext} from "../../../contexts/SectionsContext";
+import {ISection} from "../../../contexts/SectionsContext";
 
 
-export const PresetsSection = () => {
-    const sections = useContext(SectionsContext);
+interface IPresets {
+    sections: ISection[]
+}
+
+export const PresetsSection = (props: IPresets) => {
     return (
         <PresetsSectionWrapper>
             <PresetsHeader/>
             <PresetsWrapper>
-                {sections
-                    .map(({title, link, bgColor, description}, i) =>
-                        <Tile key={i.toString()} link={link}
-                              title={title} prefix={'sections'}/>)}
+                {props.sections
+                    .map((section, i) =>
+                        <Tile key={i.toString()} link={section.link}
+                              title={section.title} prefix={'sections'}/>)}
             </PresetsWrapper>
             <PresetsMore/>
         </PresetsSectionWrapper>
