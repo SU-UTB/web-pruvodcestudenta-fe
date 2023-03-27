@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import utb from '../assets/icons/utb.svg';
 import {Socials} from "./Socials";
+import {useNavigate} from "react-router-dom";
 
 const AppName = "Průvodce studenta";
 
@@ -15,6 +16,7 @@ const HeaderWrapper = styled.header
 const HeaderItem = styled.a`
   text-decoration: none;
   margin-right: 60px;
+  color: black;
 `
 
 const AppLogoImage = styled.img`
@@ -36,11 +38,13 @@ const AppLogo = styled.div`
   margin-right: auto;
   margin-left: 60px;
   display: flex;
+  cursor: pointer;
 `
 
 const Header = () => {
+    const navigate = useNavigate();
     return <HeaderWrapper>
-        <AppLogo>
+        <AppLogo onClick={() => navigate('/')}>
             <AppLogoImage src={utb} alt='utb_logo'/>
             {AppName}
         </AppLogo>

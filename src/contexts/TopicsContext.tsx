@@ -1,15 +1,18 @@
-import {ContentsWrapper} from "./ContentsWrapper";
-import {Tile} from "../../tiles/Tile";
+/*
+TODO will be handled differently
+Used only because of missing api
+*/
 
-interface IContent {
-    title: string
-    link: string,
-    bgColor: string,
-    description: string
+import {createContext} from 'react';
+import {IContent} from "../interfaces/IContent";
+
+
+interface ITopic extends IContent {
+
 }
 
 //TODO api - testing purpose
-const contents: IContent[] = [
+export const ContentsData: ITopic[] = [
     {
         title: 'Studijní systém STAG',
         link: 'stag',
@@ -51,14 +54,5 @@ const contents: IContent[] = [
             "- Vyskytne-li se někdy technický problém s chodem Portálu UTB, neváhej a napiš nám na helpdeskstag@utb.cz nebo portal@utb.cz. Do zprávy uveď minimálně své osobní číslo (např. A10123), ať Tě můžeme jednoduše dohledat. Do zprávy nikdy neuváděj rodné číslo."
     }
 ];
-
-export const Contents = () => {
-
-    return (<ContentsWrapper>
-        {contents
-            .map((c, i) =>
-                <Tile key={i.toString()} link={c.link}
-                      title={c.title}
-                      prefix={'detail'}/>)}
-    </ContentsWrapper>)
-}
+const defaultVal: ITopic[] = [];
+export const TopicsContext = createContext(defaultVal);

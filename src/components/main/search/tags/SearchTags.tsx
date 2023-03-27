@@ -1,4 +1,4 @@
-import {SearchTagsWrapper} from "./SearchTagsWrapper";
+import {SearchTagsWrapper} from "./SearchTagsWrapper.styled";
 import {SearchTag} from "./SearchTag";
 
 const PickedTags = [

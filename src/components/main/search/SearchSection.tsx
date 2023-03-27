@@ -1,4 +1,4 @@
-import {SearchSectionWrapper} from "./SearchSectionWrapper";
+import {SearchSectionWrapper} from "./SearchSectionWrapper.styled";
 import {SearchTags} from "./tags/SearchTags";
 import {SearchInput} from "./SearchInput";
 import {Divider} from "../../Divider";

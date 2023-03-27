@@ -3,26 +3,24 @@ import Header from "../components/Header";
 import {useParams} from "react-router-dom";
 import {Splash} from "../components/splash/Splash";
 import {useContext} from "react";
-import {SectionsContext} from "../contexts/SectionsContext";
-import {Description} from "../components/section/description/Description";
+import {Description} from "../components/detail/description/Description";
 import {MoreContents} from "../components/contents/MoreContents";
 import {BackButton} from "../components/buttons/BackButton";
 import {TopicsContext} from "../contexts/TopicsContext";
 import {PageDivider} from "../components/PageDivider";
 
-export const Section = () => {
-    const {id} = useParams();
-    const sections = useContext(SectionsContext);
+export const Detail = () => {
+    const {detail} = useParams();
     const topics = useContext(TopicsContext);
-    const section = sections.find(s => s.link === id);
+    const topic = topics.find(s => s.link === detail);
 
 
     return (<Page>
         <Header/>
-        <Splash sectionBgColor={section!.bgColor} title={section!.title}/>
-        <Description description={section!.description}/>
+        <Splash sectionBgColor={topic!.bgColor} title={topic!.title}/>
+        <Description description={topic!.description}/>
         <PageDivider/>
-        <MoreContents data={topics}/>
+        <MoreContents data={topics} canReplace={true}/>
         <BackButton/>
     </Page>)
 }
