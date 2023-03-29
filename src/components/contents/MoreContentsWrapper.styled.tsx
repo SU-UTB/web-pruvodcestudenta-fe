@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MoreContentsWrapper = styled.section`
   display: flex;
@@ -8,4 +8,4 @@ export const MoreContentsWrapper = styled.section`
   gap: 21px;
   margin-left: 100px;
   margin-right: 100px;
-`
+`;

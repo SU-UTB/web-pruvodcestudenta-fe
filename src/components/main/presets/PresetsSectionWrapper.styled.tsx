@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PresetsSectionWrapper = styled.section`
   width: 100vw;
@@ -6,4 +6,4 @@ export const PresetsSectionWrapper = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
+`;

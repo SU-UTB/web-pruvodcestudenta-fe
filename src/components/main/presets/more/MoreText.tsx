@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MoreText = styled.p`
   font-style: normal;
@@ -6,4 +6,4 @@ export const MoreText = styled.p`
   font-size: 18px;
   line-height: 108%;
   text-decoration-line: underline;
-`
+`;

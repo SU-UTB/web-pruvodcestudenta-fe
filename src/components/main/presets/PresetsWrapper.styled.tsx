@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PresetsWrapper = styled.div`
   display: flex;
@@ -7,4 +7,4 @@ export const PresetsWrapper = styled.div`
   gap: 21px;
   margin-left: 100px;
   margin-right: 100px;
-`
+`;

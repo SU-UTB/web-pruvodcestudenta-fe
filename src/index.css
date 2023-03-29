@@ -1,38 +1,38 @@
-
 @font-face {
-    font-family: Satoshi;
-    src: url('./assets/fonts/Satoshi-Black.woff2') format('woff2');
-    font-weight: 900;
+  font-family: Satoshi;
+  src: url('./assets/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 900;
 }
 
 @font-face {
-    font-family: Satoshi;
-    src: url('./assets/fonts/Satoshi-Bold.woff2') format('woff2');
-    font-weight: 700;
+  font-family: Satoshi;
+  src: url('./assets/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: Satoshi;
-    src: url('./assets/fonts/Satoshi-Medium.woff2') format('woff2');
-    font-weight: 500;
+  font-family: Satoshi;
+  src: url('./assets/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
 }
 
 @font-face {
-    font-family: CabinetGroteskRegular;
-    src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
-    font-weight: 400;
+  font-family: CabinetGroteskRegular;
+  src: url('./assets/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
 }
 
-html, body {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Satoshi, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Satoshi, serif;
 }

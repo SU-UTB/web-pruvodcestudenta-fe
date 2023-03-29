@@ -1,7 +1,5 @@
-import {MoreContentsTitleWrapper} from "./MoreContentsTitleWrapper.styled";
+import { MoreContentsTitleWrapper } from './MoreContentsTitleWrapper.styled';
 
 export const MoreContentsTitle = () => {
-    return <MoreContentsTitleWrapper>
-        Další
-    </MoreContentsTitleWrapper>
-}
+  return <MoreContentsTitleWrapper>Další</MoreContentsTitleWrapper>;
+};
