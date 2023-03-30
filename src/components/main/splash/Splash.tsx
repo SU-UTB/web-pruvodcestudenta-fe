@@ -1,4 +1,4 @@
-import { CityPicker } from '../../CityPicker';
+import { CityPicker } from '../../cityPicker/CityPicker';
 import { Divider } from '../../Divider.styled';
 import { SplashH1 } from './SplashH1.styled';
 import { SplashWrapper } from './SplashWrapper.styled';
