@@ -1,7 +1,8 @@
 import { Route, Routes as RouterRoutes } from 'react-router-dom';
+
+import { Detail } from './pages/Detail';
 import Main from './pages/Main';
 import { Section } from './pages/Section';
-import { Detail } from './pages/Detail';
 
 export const Routes = () => {
   return (

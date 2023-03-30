@@ -1,10 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-import { Routes } from './Routes';
+
 import {
   PresetSectionsData,
   SectionsContext,
 } from './contexts/SectionsContext';
 import { ContentsData, TopicsContext } from './contexts/TopicsContext';
+import { Routes } from './Routes';
 
 function App() {
   return (

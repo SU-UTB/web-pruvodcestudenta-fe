@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import orange from '../../assets/images/tables/orange.svg';
 
 export const TileWrapper = styled.div`

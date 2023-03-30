@@ -1,8 +1,9 @@
-import arrow_down from '../../../../assets/icons/arrow_down.svg';
 import { Divider } from '../../../Divider.styled';
 import { MoreArrowDown } from './MoreArrowDown.styled';
 import { MoreText } from './MoreText.styled';
 import { MoreWrapper } from './MoreWrapper.styled';
+
+import arrow_down from '../../../../assets/icons/arrow_down.svg';
 
 export const PresetsMore = () => (
   <MoreWrapper>

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+
 import { SectionsContext } from '../../../contexts/SectionsContext';
 import { Tile } from '../../tiles/Tile';
 import { PresetsHeader } from './header/PresetsHeader';

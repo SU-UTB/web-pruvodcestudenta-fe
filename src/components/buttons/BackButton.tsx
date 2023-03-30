@@ -1,5 +1,6 @@
-import { BackButtonWrapper } from './BackButtonWrapper.styled';
 import { useNavigate } from 'react-router-dom';
+
+import { BackButtonWrapper } from './BackButtonWrapper.styled';
 
 export const BackButton = () => {
   const navigate = useNavigate();
