@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { BackButton } from '../components/buttons/BackButton';
 import { MoreContents } from '../components/contents/MoreContents';
 import { Description } from '../components/detail/description/Description';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import { Page } from '../components/Page';
 import { PageDividerWrapper } from '../components/PageDivider.styled';
 import { Splash } from '../components/splash/Splash';

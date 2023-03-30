@@ -1,13 +1,10 @@
+import { IDescription } from '../../../lib/interfaces/IDescription';
 import { DescriptionWrapper } from './DescriptionWrapper.styled';
 
-interface IDescription {
-  description: string;
-}
-
-export const Description = (props: IDescription) => {
+export const Description = ({ description }: IDescription) => {
   return (
     <DescriptionWrapper>
-      <p>{props.description}</p>
+      <p>{description}</p>
     </DescriptionWrapper>
   );
 };

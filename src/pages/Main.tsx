@@ -1,4 +1,4 @@
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import { PresetsSection } from '../components/main/presets/PresetsSection';
 import { RectorSection } from '../components/main/rector/RectorSection';
 import { SearchSection } from '../components/main/search/SearchSection';

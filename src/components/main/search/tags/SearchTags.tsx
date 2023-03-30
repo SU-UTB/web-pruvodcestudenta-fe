@@ -6,14 +6,14 @@ const PickedTags = [
   'Život ve Zlíně',
   'Technické záležitosti',
   'Univerzitní služby',
-  '"Praktické rady"',
+  'Praktické rady',
   'Další...',
 ];
 
 export const SearchTags = () => (
   <SearchTagsWrapper>
-    {PickedTags.map((t, i) => (
-      <SearchTag key={i.toString()}>{t}</SearchTag>
+    {PickedTags.map((tag, index) => (
+      <SearchTag key={index.toString()}>{tag}</SearchTag>
     ))}
   </SearchTagsWrapper>
 );

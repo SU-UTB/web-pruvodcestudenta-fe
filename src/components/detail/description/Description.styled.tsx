@@ -13,3 +13,8 @@ export const DescriptionWrapper = styled.section`
 
   padding: 36px;
 `;
+
+export const DescriptionContent = styled.article`
+  flex: 1;
+  text-align: center;
+`;

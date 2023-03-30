@@ -1,7 +1,6 @@
-import { TileWrapper } from './TileWrapper.styled';
 import { Link } from 'react-router-dom';
-
 import { TileP } from './TileP.styled';
+import { TileWrapper } from './TileWrapper.styled';
 
 export interface ITile {
   prefix: string;
@@ -10,12 +9,12 @@ export interface ITile {
   canReplace?: boolean;
 }
 
-export const Tile = (props: ITile) => {
+export const Tile = ({ prefix, title, link, canReplace }: ITile) => {
   return (
     //TODO replace?
-    <Link to={`${props.prefix}/${props.link}`} replace={props.canReplace}>
+    <Link to={`${prefix}/${link}`} replace={canReplace}>
       <TileWrapper>
-        <TileP> {props.title}</TileP>
+        <TileP> {title}</TileP>
       </TileWrapper>
     </Link>
   );

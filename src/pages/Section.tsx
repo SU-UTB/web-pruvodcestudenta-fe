@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { BackButton } from '../components/buttons/BackButton';
 import { MoreContents } from '../components/contents/MoreContents';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import { Page } from '../components/Page';
 import { PageDividerWrapper } from '../components/PageDivider.styled';
 import { Description } from '../components/section/description/Description';

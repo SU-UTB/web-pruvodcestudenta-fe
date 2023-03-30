@@ -6,6 +6,5 @@ export const MoreContentsWrapper = styled.section`
   justify-content: center;
   align-items: center;
   gap: 21px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0 100px;
 `;

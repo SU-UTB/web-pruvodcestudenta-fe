@@ -5,6 +5,5 @@ export const SearchTagsWrapper = styled.div`
   flex-wrap: wrap;
   column-gap: 100px;
   row-gap: 36px;
-  margin-right: 414px;
-  margin-left: 414px;
+  margin: 0 414px;
 `;
