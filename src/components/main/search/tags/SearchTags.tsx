@@ -1,5 +1,5 @@
+import { SearchTag } from './SearchTag.styled';
 import { SearchTagsWrapper } from './SearchTagsWrapper.styled';
-import { SearchTag } from './SearchTag';
 
 const PickedTags = [
   'Univerzitní svět',

@@ -1,14 +1,14 @@
-import { Page } from '../components/Page';
-import Header from '../components/Header';
-import { useParams } from 'react-router-dom';
-import { Splash } from '../components/splash/Splash';
 import { useContext } from 'react';
-import { SectionsContext } from '../contexts/SectionsContext';
-import { Description } from '../components/section/description/Description';
-import { MoreContents } from '../components/contents/MoreContents';
+import { useParams } from 'react-router-dom';
 import { BackButton } from '../components/buttons/BackButton';
+import { MoreContents } from '../components/contents/MoreContents';
+import Header from '../components/Header';
+import { Page } from '../components/Page';
+import { PageDividerWrapper } from '../components/PageDivider.styled';
+import { Description } from '../components/section/description/Description';
+import { Splash } from '../components/splash/Splash';
+import { SectionsContext } from '../contexts/SectionsContext';
 import { TopicsContext } from '../contexts/TopicsContext';
-import { PageDivider } from '../components/PageDivider';
 
 export const Section = () => {
   const { id } = useParams();
@@ -21,7 +21,7 @@ export const Section = () => {
       <Header />
       <Splash sectionBgColor={section!.bgColor} title={section!.title} />
       <Description description={section!.description} />
-      <PageDivider />
+      <PageDividerWrapper />
       <MoreContents data={topics} />
       <BackButton />
     </Page>

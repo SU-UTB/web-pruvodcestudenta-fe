@@ -1,7 +1,7 @@
+import { Divider } from '../../Divider.styled';
+import { SearchInput } from './SearchInput.styled';
 import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
 import { SearchTags } from './tags/SearchTags';
-import { SearchInput } from './SearchInput';
-import { Divider } from '../../Divider';
 
 export const SearchSection = () => (
   <SearchSectionWrapper>
