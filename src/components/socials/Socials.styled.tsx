@@ -4,6 +4,7 @@ export const SocialsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 `;
 
 export const SocialLink = styled.a`
