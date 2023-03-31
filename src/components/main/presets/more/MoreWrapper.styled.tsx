@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MoreWrapper = styled.div`
   margin-top: 36px;
@@ -8,4 +8,4 @@ export const MoreWrapper = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`
+`;

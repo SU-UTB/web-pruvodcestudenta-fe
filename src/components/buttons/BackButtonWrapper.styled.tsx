@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BackButtonWrapper = styled.button`
   min-width: 220px;
@@ -11,4 +11,4 @@ export const BackButtonWrapper = styled.button`
   border: 0.5px solid #c1c1c1;
   margin: 40px auto;
   cursor: pointer;
-`
+`;

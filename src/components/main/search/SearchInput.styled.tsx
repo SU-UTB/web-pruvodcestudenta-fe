@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchInput = styled.input`
   width: 556px;
@@ -10,4 +10,4 @@ export const SearchInput = styled.input`
   border-radius: 47px;
   border: 0.5px solid #c1c1c1;
   padding-left: 25px;
-`
+`;

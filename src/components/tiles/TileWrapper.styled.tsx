@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import orange from "../../assets/images/tables/orange.svg"
+import styled from 'styled-components';
+
+import orange from '../../assets/images/tables/orange.svg';
 
 export const TileWrapper = styled.div`
   width: 258px;
@@ -9,8 +10,8 @@ export const TileWrapper = styled.div`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  background: #FFDEC9 url(${orange}) no-repeat center;
+  background: #ffdec9 url(${orange}) no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
   text-decoration: none;
-`
+`;

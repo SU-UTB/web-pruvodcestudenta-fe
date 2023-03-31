@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchTag = styled.div`
   min-width: 180px;
@@ -10,4 +10,4 @@ export const SearchTag = styled.div`
   justify-content: center;
   border: 0.5px solid #c1c1c1;
   cursor: pointer;
-`
+`;

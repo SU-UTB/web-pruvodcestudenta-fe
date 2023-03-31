@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const RectorImageWrapper = styled.img`
   min-width: 519px;
@@ -6,4 +6,4 @@ export const RectorImageWrapper = styled.img`
   margin-left: 250px;
   object-fit: cover;
   border-radius: 12px;
-`
+`;
