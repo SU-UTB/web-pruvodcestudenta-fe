@@ -1,16 +1,16 @@
-import {AxiosInstance} from 'axios';
+import { AxiosInstance } from 'axios';
 
-import {ISection} from "../contexts/SectionsContext";
-import {Constants} from "../tools/Constants";
+import { ISection } from '../contexts/SectionsContext';
+import { Constants } from '../tools/Constants';
 
 export class ApiSections {
-    #client: AxiosInstance;
+  #client: AxiosInstance;
 
-    constructor(client: AxiosInstance) {
-        this.#client = client;
-    }
+  constructor(client: AxiosInstance) {
+    this.#client = client;
+  }
 
-    getSections = async () => {
-        return await this.#client.get<Array<ISection>>(Constants.SECTIONS);
-    }
+  getSections = async () => {
+    return await this.#client.get<Array<ISection>>(Constants.SECTIONS);
+  };
 }
