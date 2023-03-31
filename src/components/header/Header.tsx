@@ -4,9 +4,9 @@ import { Socials } from '../socials/Socials';
 import { HeaderItems } from './Header.content';
 import {
   AppLogo,
-  AppLogoImage,
   HeaderItem,
   HeaderWrapper,
+  LinksWrapper,
 } from './Header.styled';
 
 import utb from '../../assets/icons/utb.svg';
@@ -18,15 +18,17 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <AppLogo onClick={() => navigate('/')}>
-        <AppLogoImage src={utb} alt="utb_logo" />
+        <img src={utb} alt="utb_logo" />
         {AppName}
       </AppLogo>
-      {HeaderItems.map(({ title, link }) => (
-        <HeaderItem key={title} href={link}>
-          {title}
-        </HeaderItem>
-      ))}
-      <Socials />
+      <LinksWrapper>
+        {HeaderItems.map(({ title, link }) => (
+          <HeaderItem key={title} href={link}>
+            {title}
+          </HeaderItem>
+        ))}
+        <Socials />
+      </LinksWrapper>
     </HeaderWrapper>
   );
 };
