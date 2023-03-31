@@ -1,22 +1,21 @@
-import {TileWrapper} from "./TileWrapper";
-import {Link} from 'react-router-dom';
-
-import {TileP} from "./TileP";
-
+import { Link } from 'react-router-dom';
+import { TileP } from './TileP.styled';
+import { TileWrapper } from './TileWrapper.styled';
 
 export interface ITile {
-    prefix: string
-    title: string
-    link: string
+  prefix: string;
+  title: string;
+  link: string;
+  canReplace?: boolean;
 }
 
-export const Tile = (props: ITile) => {
-
-    return (
-        <Link to={`${props.prefix}/${props.link}`}>
-            <TileWrapper>
-                <TileP> {props.title}</TileP>
-            </TileWrapper>
-
-        </Link>)
-}
+export const Tile = ({ prefix, title, link, canReplace }: ITile) => {
+  return (
+    //TODO replace?
+    <Link to={`${prefix}/${link}`} replace={canReplace}>
+      <TileWrapper>
+        <TileP> {title}</TileP>
+      </TileWrapper>
+    </Link>
+  );
+};

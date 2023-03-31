@@ -1,20 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
   justify-content: center;
-`
+`;
 
 interface Props {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
-export const Page = ({children}: Props) => {
-    return (
-        <>
-            {children}
-        </>
-    );
-}
+export const Page = ({ children }: Props) => {
+  return <>{children}</>;
+};

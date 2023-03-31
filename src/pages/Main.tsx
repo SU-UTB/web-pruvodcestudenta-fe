@@ -1,31 +1,26 @@
-import Header from "../components/Header";
-import {Splash} from "../components/main/splash/Splash";
-import {SearchSection} from "../components/main/search/SearchSection";
-import {PageDivider} from "../components/PageDivider";
-import {Page} from "../components/Page";
-import {PresetsSection} from "../components/main/presets/PresetsSection";
-import {RectorSection} from "../components/main/rector/RectorSection";
-import useFetchSections from "../hooks/useFetchSections";
+import Header from '../components/header/Header';
+import { PresetsSection } from '../components/main/presets/PresetsSection';
+import { RectorSection } from '../components/main/rector/RectorSection';
+import { SearchSection } from '../components/main/search/SearchSection';
+import { Splash } from '../components/main/splash/Splash';
+import { Page } from '../components/Page';
+import { PageDividerWrapper } from '../components/PageDivider.styled';
 
 const Main = () => {
-    const {data: sections, isLoading, error} = useFetchSections();
-
-    return (
-        <Page>
-            {isLoading && <p>Nahrávám...</p>}
-            <>
-                <Header/>
-                <Splash/>
-                <SearchSection/>
-                <PageDivider/>
-                <PresetsSection sections={sections}/>
-                <PageDivider/>
-                <RectorSection/>
-                {/*
+  return (
+    <Page>
+      <Header />
+      <Splash />
+      <SearchSection />
+      <PageDividerWrapper />
+      <PresetsSection />
+      <PageDividerWrapper />
+      <RectorSection />
+      {/*
             <Footer/>
-*/}</>
-        </Page>
-    );
+*/}
+    </Page>
+  );
 };
 
 export default Main;
