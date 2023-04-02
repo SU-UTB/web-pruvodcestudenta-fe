@@ -1,9 +1,15 @@
 import styled from 'styled-components';
 
 export const RectorImageWrapper = styled.img`
-  min-width: 519px;
-  height: 519px;
-  margin-left: 250px;
+  width: 90%;
+  max-width: 380px;
+  height: 30vh;
   object-fit: cover;
   border-radius: 12px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 519px;
+    width: 40%;
+    height: 519px;
+  }
 `;
