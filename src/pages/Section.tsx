@@ -5,7 +5,6 @@ import { BackButton } from '../components/buttons/BackButton';
 import { MoreContents } from '../components/contents/MoreContents';
 import Header from '../components/header/Header';
 import { Page } from '../components/Page';
-import { PageDividerWrapper } from '../components/PageDivider.styled';
 import { Description } from '../components/section/description/Description';
 import { Splash } from '../components/splash/Splash';
 import { SectionsContext } from '../contexts/SectionsContext';
@@ -22,7 +21,6 @@ export const Section = () => {
       <Header />
       <Splash sectionBgColor={section!.bgColor} title={section!.title} />
       <Description description={section!.description} />
-      <PageDividerWrapper />
       <MoreContents data={topics} />
       <BackButton />
     </Page>
