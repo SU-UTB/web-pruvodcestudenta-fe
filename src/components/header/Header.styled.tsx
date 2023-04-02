@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface LinksWrapperProps {
+  isOpen: boolean;
+}
+
 export const HeaderWrapper = styled.header`
   height: 60px;
   max-width: 100%;
@@ -11,6 +15,7 @@ export const HeaderWrapper = styled.header`
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 0 0 16px 16px;
+  position: relative;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row;
@@ -25,22 +30,23 @@ export const HeaderItem = styled.a`
   color: black;
 `;
 
-export const LinksWrapper = styled.div`
+export const LinksWrapper = styled.div<LinksWrapperProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px 0;
   position: absolute;
+  transition: transform 0.3s ease-in-out;
   top: 60px;
+  transform: translateX(${(props) => (props.isOpen ? '0' : '100vw')});
   width: 100%;
   background: #ffffff;
   padding: 20px 0;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    transform: translateX(0);
     flex-direction: row;
     gap: 0 60px;
-    position: relative;
-    top: 0;
+    position: static;
     width: auto;
     background: none;
   }
@@ -49,7 +55,12 @@ export const LinksWrapper = styled.div`
 export const AppLogo = styled.div`
   display: flex;
   align-items: center;
+  align-self: start;
   display: flex;
   cursor: pointer;
   gap: 0 30px;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    align-self: center;
+  }
 `;

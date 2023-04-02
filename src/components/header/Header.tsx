@@ -27,7 +27,7 @@ const Header = () => {
         {AppName}
       </AppLogo>
       <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-      <LinksWrapper>
+      <LinksWrapper isOpen={isOpen}>
         {HeaderItems.map(({ title, link }) => (
           <HeaderItem key={title} href={link}>
             {title}
