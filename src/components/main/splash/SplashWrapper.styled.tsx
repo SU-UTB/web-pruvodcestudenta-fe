@@ -15,5 +15,6 @@ export const SplashWrapper = styled.section`
 
   p {
     text-align: center;
+    margin-bottom: 62px;
   }
 `;
