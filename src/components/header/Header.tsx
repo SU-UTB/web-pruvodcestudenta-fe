@@ -9,18 +9,24 @@ import {
   LinksWrapper,
 } from './Header.styled';
 
+import { useState } from 'react';
 import utb from '../../assets/icons/utb.svg';
+import HamburgerButton from './hamburger/HamburgerButton';
 
 const AppName = 'Průvodce studenta';
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <HeaderWrapper>
       <AppLogo onClick={() => navigate('/')}>
         <img src={utb} alt="utb_logo" />
         {AppName}
       </AppLogo>
+      <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       <LinksWrapper>
         {HeaderItems.map(({ title, link }) => (
           <HeaderItem key={title} href={link}>

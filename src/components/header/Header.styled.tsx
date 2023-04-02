@@ -10,6 +10,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  border-radius: 0 0 16px 16px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row;
