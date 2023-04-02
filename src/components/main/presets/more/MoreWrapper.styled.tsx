@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const MoreWrapper = styled.div`
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin: 36px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
