@@ -56,7 +56,6 @@ export const AppLogo = styled.div`
   display: flex;
   align-items: center;
   align-self: start;
-  display: flex;
   cursor: pointer;
   gap: 0 30px;
 
