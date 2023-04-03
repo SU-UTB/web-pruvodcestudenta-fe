@@ -9,7 +9,7 @@ export const RectorSectionWrapper = styled.section`
   gap: 24px;
   align-items: center;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     flex-direction: row;
     gap: 82px;
   }

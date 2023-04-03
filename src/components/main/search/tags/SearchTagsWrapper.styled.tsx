@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const SearchTagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  column-gap: 100px;
-  row-gap: 36px;
-  max-width: 1200px;
   justify-content: center;
+  gap: 20px 50px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     justify-content: start;
+    gap: 36px 100px;
+    max-width: ${({ theme }) => theme.breakpoints.desktop};
   }
 `;
