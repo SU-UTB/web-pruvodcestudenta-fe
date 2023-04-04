@@ -1,6 +1,6 @@
 import { SocialTypes } from '../../lib/enums/SocialTypes';
 import { SocialItems } from './Socials.content';
-import { SocialImage, SocialsWrapper } from './Socials.styled';
+import { SocialLink, SocialsWrapper } from './Socials.styled';
 
 import facebook from '../../assets/icons/facebook.svg';
 import instagram from '../../assets/icons/instagram.svg';
@@ -20,9 +20,9 @@ const getImage = (type: SocialTypes) => {
 export const Socials = () => (
   <SocialsWrapper>
     {SocialItems.map(({ type, link, alt }) => (
-      <a key={type.toString()} href={link}>
-        <SocialImage src={getImage(type)} alt={alt}></SocialImage>
-      </a>
+      <SocialLink key={type.toString()} href={link}>
+        <img src={getImage(type)} alt={alt}></img>
+      </SocialLink>
     ))}
   </SocialsWrapper>
 );

@@ -3,11 +3,15 @@ import styled from 'styled-components';
 export const CityPickerWrapper = styled.div`
   width: 400px;
   height: 60px;
-  display: flex;
+  display: none;
   background-color: #ffcbab;
   border-radius: 25px;
   color: black;
   position: relative;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: flex;
+  }
 `;
 
 export const CitySelect = styled.div<{ left: boolean }>`
