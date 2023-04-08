@@ -1,7 +1,7 @@
-import { AxiosInstance } from 'axios';
+import {AxiosInstance} from 'axios';
 
-import { ISection } from '../contexts/SectionsContext';
-import { Constants } from '../tools/Constants';
+import {Constants} from '../tools/Constants';
+import {ISection} from "../interfaces/ISection";
 
 export class ApiSections {
   #client: AxiosInstance;

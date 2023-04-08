@@ -1,6 +1,7 @@
-import axios, { AxiosInstance } from 'axios';
-import { ApiSections } from './ApiSections';
-import { Constants } from '../tools/Constants';
+import axios, {AxiosInstance} from 'axios';
+import {ApiSections} from './ApiSections';
+import {Constants} from '../tools/Constants';
+import {ApiLanding} from "./pages/ApiLanding";
 
 export class Api {
   private static _instance: Api;
@@ -17,4 +18,5 @@ export class Api {
   });
 
   sections: ApiSections = new ApiSections(this.#client);
+  pagesLanding: ApiLanding = new ApiLanding(this.#client);
 }

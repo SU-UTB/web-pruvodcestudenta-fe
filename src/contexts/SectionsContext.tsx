@@ -3,10 +3,9 @@ TODO will be handled differently
 Used only because of missing api
 */
 
-import { createContext } from 'react';
-import { IContent } from '../lib/interfaces/IContent';
+import {createContext} from 'react';
+import {ISection} from "../interfaces/ISection";
 
-interface ISection extends IContent {}
 
 export const PresetSectionsData: ISection[] = [
   {

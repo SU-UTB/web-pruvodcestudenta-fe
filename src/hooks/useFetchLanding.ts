@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import {Api} from '../api/Api';
-import {ISection} from "../interfaces/ISection";
+import {ILanding} from "../api/pages/ApiLanding";
 
-const useFetchSections = () => {
-    const [data, setData] = useState<ISection[]>([]);
+const useFetchLanding = () => {
+    const [data, setData] = useState<ILanding>();
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -12,7 +12,7 @@ const useFetchSections = () => {
 
         const getData = async () => {
             try {
-                const {data} = await Api.Instance.sections.getSections();
+                const {data} = await Api.Instance.pagesLanding.getLanding();
                 setData(data);
                 setError(null);
             } catch (err) {
@@ -33,4 +33,4 @@ const useFetchSections = () => {
     return {data, isLoading, error};
 };
 
-export default useFetchSections;
+export default useFetchLanding;
