@@ -11,14 +11,14 @@ const useFetchLanding = () => {
 
 
     useEffect(() => {
-        if (sections.sections.length !== 0) return;
+        if (sections.length !== 0) return;
         const abortController = new AbortController();
 
         const getData = async () => {
             try {
                 const {data: landing} = await Api.Instance.pagesLanding.getLanding();
                 setData(landing);
-                setSections(landing);
+                setSections(landing.sections);
                 setError(null);
             } catch (err) {
                 if (err instanceof Error) {

@@ -6,19 +6,15 @@ Used only because of missing api
 import {createContext, Dispatch, SetStateAction, useState} from 'react';
 import {ISection} from "../interfaces/ISection";
 
-type ISections = {
-    sections: ISection[]
-}
-type ISectionsContext = [ISections, Dispatch<SetStateAction<ISections>>];
+
+type ISectionsContext = [ISection[], Dispatch<SetStateAction<ISection[]>>];
 
 
-export const SectionsContext = createContext<ISectionsContext>([{sections: []}, () => {
+export const SectionsContext = createContext<ISectionsContext>([[], () => {
 }]);
 
 export const SectionsProvider = ({children}: { children: any }) => {
-    const [state, setState] = useState<ISections>({
-        sections: [],
-    });
+    const [state, setState] = useState<ISection[]>([]);
 
     return <SectionsContext.Provider value={[state, setState]}>{children}</SectionsContext.Provider>;
 };
