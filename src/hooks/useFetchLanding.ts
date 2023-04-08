@@ -11,7 +11,10 @@ const useFetchLanding = () => {
 
 
     useEffect(() => {
-        if (sections.length !== 0) return;
+        if (sections.length !== 0) {
+            setIsLoading(false);
+            return;
+        }
         const abortController = new AbortController();
 
         const getData = async () => {
