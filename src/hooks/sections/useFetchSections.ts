@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import {Api} from '../api/Api';
-import {ISection} from "../interfaces/ISection";
+import {Api} from "../../api/Api";
+import {ISection} from "../../interfaces/ISection";
 
 const useFetchSections = () => {
     const [data, setData] = useState<ISection[]>([]);
