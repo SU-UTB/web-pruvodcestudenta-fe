@@ -14,10 +14,10 @@ export const PresetsSection = () => {
         <PresetsSectionWrapper>
             <PresetsHeader/>
             <PresetsWrapper>
-                {sections.map(({title, link, bgColor, description}, i) => (
+                {sections.map(({title, id, link, bgColor, description}, i) => (
                     <Tile
                         key={i.toString()}
-                        link={link}
+                        id={id}
                         title={title}
                         prefix={'sections'}
                     />

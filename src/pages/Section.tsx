@@ -7,15 +7,11 @@ import {Page} from '../components/Page';
 import {PageDividerWrapper} from '../components/PageDivider.styled';
 import {Description} from '../components/section/description/Description';
 import {Splash} from '../components/splash/Splash';
-import {useContext} from "react";
-import {SectionsContext} from "../contexts/SectionsContext";
 import useFetchSection from "../hooks/sections/useFetchSection";
 
 export const Section = () => {
-    const {link} = useParams();
-    const [sections] = useContext(SectionsContext);
-    const {id} = sections.find(s => s.link === link) || sections[0];
-    const {data: section, isLoading} = useFetchSection(id);
+    const {id = '0'} = useParams();
+    const {data: section, isLoading} = useFetchSection(parseInt(id));
 
     return (
         isLoading ? <p>Loading</p> :
