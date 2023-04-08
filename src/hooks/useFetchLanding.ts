@@ -1,19 +1,24 @@
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {Api} from '../api/Api';
 import {ILanding} from "../api/pages/ApiLanding";
+import {SectionsContext} from "../contexts/SectionsContext";
 
 const useFetchLanding = () => {
     const [data, setData] = useState<ILanding>();
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [sections, setSections] = useContext(SectionsContext);
+
 
     useEffect(() => {
+        if (sections.sections.length !== 0) return;
         const abortController = new AbortController();
 
         const getData = async () => {
             try {
-                const {data} = await Api.Instance.pagesLanding.getLanding();
-                setData(data);
+                const {data: landing} = await Api.Instance.pagesLanding.getLanding();
+                setData(landing);
+                setSections(landing);
                 setError(null);
             } catch (err) {
                 if (err instanceof Error) {
