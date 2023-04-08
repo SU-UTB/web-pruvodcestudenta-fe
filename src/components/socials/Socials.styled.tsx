@@ -2,10 +2,15 @@ import styled from 'styled-components';
 
 export const SocialsWrapper = styled.div`
   display: flex;
-  margin-right: 60px;
   align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 `;
 
-export const SocialImage = styled.img`
-  margin-right: 30px;
+export const SocialLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
 `;

@@ -4,29 +4,37 @@ import { Socials } from '../socials/Socials';
 import { HeaderItems } from './Header.content';
 import {
   AppLogo,
-  AppLogoImage,
   HeaderItem,
   HeaderWrapper,
+  LinksWrapper,
 } from './Header.styled';
 
+import { useState } from 'react';
 import utb from '../../assets/icons/utb.svg';
+import HamburgerButton from './hamburger/HamburgerButton';
 
 const AppName = 'Průvodce studenta';
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <HeaderWrapper>
       <AppLogo onClick={() => navigate('/')}>
-        <AppLogoImage src={utb} alt="utb_logo" />
+        <img src={utb} alt="utb_logo" />
         {AppName}
       </AppLogo>
-      {HeaderItems.map(({ title, link }) => (
-        <HeaderItem key={title} href={link}>
-          {title}
-        </HeaderItem>
-      ))}
-      <Socials />
+      <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      <LinksWrapper isOpen={isOpen}>
+        {HeaderItems.map(({ title, link }) => (
+          <HeaderItem key={title} href={link}>
+            {title}
+          </HeaderItem>
+        ))}
+        <Socials />
+      </LinksWrapper>
     </HeaderWrapper>
   );
 };
