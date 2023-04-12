@@ -1,10 +1,27 @@
+import { useState } from 'react';
 import SearchButton from './SearchButton';
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
 import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
 import { SearchTags } from './tags/SearchTags';
 
+const pickedTags = [
+  'Univerzitní svět',
+  'Život ve Zlíně',
+  'Technické záležitosti',
+  'Univerzitní služby',
+  'Praktické rady',
+  'Další...',
+];
+
 export const SearchSection = () => {
+  const [tags] = useState<string[]>(pickedTags);
+  const [query, setQuery] = useState<string>('');
+
+  const filteredTags = tags.filter((tag) => {
+    return tag.toLowerCase().includes(query.toLowerCase());
+  });
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -14,10 +31,15 @@ export const SearchSection = () => {
   return (
     <SearchSectionWrapper>
       <SearchInputForm onSubmit={handleSubmit}>
-        <SearchInput type="text" placeholder="Hledat" />
+        <SearchInput
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+          placeholder="Hledat"
+        />
         <SearchButton />
       </SearchInputForm>
-      <SearchTags />
+      <SearchTags pickedTags={filteredTags} />
     </SearchSectionWrapper>
   );
 };

@@ -1,18 +1,13 @@
 import { SearchTag } from './SearchTag.styled';
 import { SearchTagsWrapper } from './SearchTagsWrapper.styled';
 
-const PickedTags = [
-  'Univerzitní svět',
-  'Život ve Zlíně',
-  'Technické záležitosti',
-  'Univerzitní služby',
-  'Praktické rady',
-  'Další...',
-];
+interface SearchTagsProps {
+  pickedTags: string[];
+}
 
-export const SearchTags = () => (
+export const SearchTags = ({ pickedTags }: SearchTagsProps) => (
   <SearchTagsWrapper>
-    {PickedTags.map((tag, index) => (
+    {pickedTags.map((tag, index) => (
       <SearchTag key={index.toString()}>{tag}</SearchTag>
     ))}
   </SearchTagsWrapper>
