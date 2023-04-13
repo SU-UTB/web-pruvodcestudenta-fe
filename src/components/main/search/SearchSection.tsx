@@ -4,6 +4,7 @@ import SearchButton from './SearchButton';
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
 import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
+import FilterButton from './filter/FilterButton';
 import { SearchTags } from './tags/SearchTags';
 
 const pickedTags = [
@@ -32,6 +33,7 @@ export const SearchSection = () => {
 
   return (
     <SearchSectionWrapper>
+      <FilterButton />
       <SearchInputForm onSubmit={handleSubmit}>
         <SearchInput
           value={query}
