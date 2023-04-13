@@ -14,8 +14,8 @@ export const PresetsSection = () => {
     <PresetsSectionWrapper>
       <PresetsHeader />
       <PresetsWrapper>
-        {sections.map(({ title, id, link, bgColor, description }, i) => (
-          <Tile key={i.toString()} id={id} title={title} prefix={'sections'} />
+        {sections.map(({ title, id, link, bgColor, description }) => (
+          <Tile key={id} id={id} title={title} prefix={'sections'} />
         ))}
       </PresetsWrapper>
       <PresetsMore />

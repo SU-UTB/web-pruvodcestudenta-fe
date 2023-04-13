@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { normalizeText } from '../../../utils/normalizeText';
 import SearchButton from './SearchButton';
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
@@ -20,7 +21,7 @@ export const SearchSection = () => {
 
   const filteredTags = useMemo(() => {
     return tags.filter((tag) => {
-      return tag.toLowerCase().includes(query.toLowerCase());
+      return normalizeText(tag).includes(normalizeText(query));
     });
   }, [tags, query]);
 
