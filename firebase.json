@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist",
+    "target":"utb-pruvodce-studenta-client",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
