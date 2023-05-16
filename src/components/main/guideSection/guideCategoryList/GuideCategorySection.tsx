@@ -1,14 +1,14 @@
-import { useContext } from 'react';
-
-import { SectionsContext } from '../../../../contexts/SectionsContext';
+import { ISection } from '../../../../interfaces/ISection';
 import { GuideCategoryCard } from '../../../guideCategory/GuideCategoryCard';
 import { GuideCategoryWrapper } from './GuideCategoryWrapper.styled';
 import { GuideCatedoryHeader } from './header/GuideCatedoryHeader';
 import { GuideCategoryListMore } from './more/GuideCategoryListMore';
 
-export const GuideCategorySection = () => {
-  const [sections] = useContext(SectionsContext);
+interface Props {
+  sections: ISection[];
+}
 
+export const GuideCategorySection = ({ sections }: Props) => {
   return (
     <>
       <GuideCatedoryHeader />

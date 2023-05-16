@@ -1,11 +1,8 @@
-import { useMemo, useState } from 'react';
-import { normalizeText } from '../../../../utils/normalizeText';
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
 import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
 import FilterButton from './filterButton/FilterButton';
 import SearchButton from './searchButton/SearchButton';
-import { SearchTags } from './tags/SearchTags';
 
 const pickedTags = [
   'Univerzitní svět',
@@ -16,28 +13,20 @@ const pickedTags = [
   'Další...',
 ];
 
-export const SearchSection = () => {
-  const [tags] = useState<string[]>(pickedTags);
-  const [query, setQuery] = useState<string>('');
+interface Props {
+  handleSubmit: () => void;
+  value: string;
+  setValue: (value: string) => void;
+}
 
-  const filteredTags = useMemo(() => {
-    return tags.filter((tag) => {
-      return normalizeText(tag).includes(normalizeText(query));
-    });
-  }, [tags, query]);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // TODO: handle submit action if any
-  };
-
+export const SearchSection = ({ value, setValue, handleSubmit }: Props) => {
   return (
     <SearchSectionWrapper>
       <FilterButton />
       <SearchInputForm onSubmit={handleSubmit}>
         <SearchInput
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           type="text"
           placeholder="Hledat"
         />
