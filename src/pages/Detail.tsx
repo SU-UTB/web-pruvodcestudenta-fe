@@ -1,10 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { Page } from '../components/Page';
-import React from 'react';
 import { BackButton } from '../components/buttons/BackButton';
 import { Description } from '../components/detail/description/Description';
-import { Splash } from '../components/splash/Splash';
 import Header from '../components/header/Header';
+import { Splash } from '../components/splash/Splash';
 import useFetchTopic from '../hooks/sections/useFetchTopic';
 
 export const Detail = () => {
