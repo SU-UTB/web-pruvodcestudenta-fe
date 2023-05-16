@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react';
 import { normalizeText } from '../../../../utils/normalizeText';
-import FilterButton from '../filter/FilterButton';
-import SearchButton from './SearchButton';
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
 import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
+import FilterButton from './filterButton/FilterButton';
+import SearchButton from './searchButton/SearchButton';
 import { SearchTags } from './tags/SearchTags';
 
 const pickedTags = [
