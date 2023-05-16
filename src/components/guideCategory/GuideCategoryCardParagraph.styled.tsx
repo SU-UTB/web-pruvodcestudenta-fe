@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const TileP = styled.p`
+export const CardParagraph = styled.p`
   margin-bottom: 16px;
 `;

@@ -1,5 +1,5 @@
 import { IContent } from '../../lib/interfaces/IContent';
-import { Tile } from '../tiles/Tile';
+import { GuideCategoryCard } from '../guideCategory/GuideCategoryCard';
 import { MoreContentsGridWrapper } from './MoreContentsGridWrapper.styled';
 import { MoreContentsTitle } from './MoreContentsTitle';
 import { MoreContentsWrapper } from './MoreContentsWrapper.styled';
@@ -15,7 +15,7 @@ export const MoreContents = ({ data, canReplace }: IContentsData<IContent>) => {
       <MoreContentsTitle />
       <MoreContentsGridWrapper>
         {data.map((c, i) => (
-          <Tile
+          <GuideCategoryCard
             key={i.toString()}
             id={c.id}
             title={c.title}

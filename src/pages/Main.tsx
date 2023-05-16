@@ -1,9 +1,8 @@
-import Header from '../components/header/Header';
-import { PresetsSection } from '../components/main/presets/PresetsSection';
-import { RectorSection } from '../components/main/rector/RectorSection';
-import { SearchSection } from '../components/main/search/SearchSection';
-import { Splash } from '../components/main/splash/Splash';
 import { Page } from '../components/Page';
+import Header from '../components/header/Header';
+import GuideSection from '../components/main/guideSection/GuideSection';
+import { RectorSection } from '../components/main/rector/RectorSection';
+import { Splash } from '../components/main/splash/Splash';
 import useFetchLanding from '../hooks/useFetchLanding';
 
 const Main = () => {
@@ -15,8 +14,7 @@ const Main = () => {
     <Page>
       <Header />
       <Splash />
-      <SearchSection />
-      <PresetsSection />
+      <GuideSection />
       <RectorSection />
       {/*
             <Footer/>
