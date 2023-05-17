@@ -1,5 +1,5 @@
 import { IContent } from '../../lib/interfaces/IContent';
-import { GuideCategoryCard } from '../guideCategory/GuideCategoryCard';
+import { GuideCategoryCard } from '../guideCard/GuideCard';
 import { MoreContentsGridWrapper } from './MoreContentsGridWrapper.styled';
 import { MoreContentsTitle } from './MoreContentsTitle';
 import { MoreContentsWrapper } from './MoreContentsWrapper.styled';
