@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import orange from '../../assets/images/tables/orange.svg';
+import orangeImg from '../../assets/images/tables/orange.svg';
 
-export const GuideCardWrapper = styled.div`
+type GuideCardWrapperProps = {
+  bgColor?: string;
+};
+
+export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
   width: 258px;
   height: 258px;
   border-radius: 8px;
@@ -11,7 +15,8 @@ export const GuideCardWrapper = styled.div`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  background: #ffdec9 url(${orange}) no-repeat center;
+  background: ${({ bgColor }) => bgColor || '#ffdec9'} url(${orangeImg})
+    no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
   text-decoration: none;

@@ -9,13 +9,20 @@ export interface IGuideCard {
   id: number;
   title: string;
   canReplace?: boolean;
+  bgColor?: string;
 }
 
-export const GuideCard = ({ prefix, title, id, canReplace }: IGuideCard) => {
+export const GuideCard = ({
+  prefix,
+  title,
+  id,
+  canReplace,
+  bgColor,
+}: IGuideCard) => {
   return (
     //TODO replace?
     <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
-      <GuideCardWrapper>
+      <GuideCardWrapper bgColor={bgColor}>
         <GuideCardHeadline>{title}</GuideCardHeadline>
       </GuideCardWrapper>
     </StyledLink>
