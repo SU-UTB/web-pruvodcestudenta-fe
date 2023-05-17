@@ -5,7 +5,7 @@ import orange from '../../assets/images/tables/orange.svg';
 
 export const GuideCardWrapper = styled.div`
   width: 258px;
-  min-height: 258px;
+  height: 258px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
