@@ -19,7 +19,6 @@ export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
     no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
-  text-decoration: none;
 `;
 
 export const GuideCardHeadline = styled.h4`
