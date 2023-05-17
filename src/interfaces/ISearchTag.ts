@@ -1,5 +1,4 @@
 export interface ISearchTag {
-    name: String,
-    sectionId: number
-
+  name: String;
+  sectionId: number;
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PresetsWrapper = styled.div`
+export const GuideCategoryWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

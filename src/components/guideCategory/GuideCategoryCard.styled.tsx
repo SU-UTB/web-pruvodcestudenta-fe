@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import orange from '../../assets/images/tables/orange.svg';
 
-export const TileWrapper = styled.div`
+export const Wrapper = styled.div`
   width: 258px;
   height: 258px;
   border-radius: 8px;
