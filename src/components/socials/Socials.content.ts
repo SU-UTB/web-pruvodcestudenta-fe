@@ -1,20 +1,26 @@
-import { SocialTypes } from '../../lib/enums/SocialTypes';
 import { ISocialItem } from '../../lib/interfaces/ISocialItem';
 
-export const SocialItems: ISocialItem[] = [
+import facebook from '../../assets/icons/facebook.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import youtube from '../../assets/icons/youtube.svg';
+
+export const socialItems: ISocialItem[] = [
   {
-    type: SocialTypes.instagram,
     link: 'https://www.instagram.com/utbzlin/?hl=cs',
+    image: instagram,
     alt: 'instagram_link',
+    newTab: true,
   },
   {
-    type: SocialTypes.facebook,
     link: 'https://www.facebook.com/UTBZlin',
+    image: facebook,
     alt: 'facebook_link',
+    newTab: true,
   },
   {
-    type: SocialTypes.youtube,
     link: 'https://www.youtube.com/c/univerzitatomasebativezline',
+    image: youtube,
     alt: 'youtube_link',
+    newTab: true,
   },
 ];
