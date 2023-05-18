@@ -1,7 +1,6 @@
-import { SocialTypes } from '../enums/SocialTypes';
+import { ILink } from './ILink';
 
-export interface ISocialItem {
-  type: SocialTypes;
-  link: string;
+export interface ISocialItem extends ILink {
+  image: string;
   alt: string;
 }

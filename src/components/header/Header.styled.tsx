@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface LinksWrapperProps {
@@ -24,7 +25,7 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const HeaderItem = styled.a`
+export const HeaderLink = styled(Link)`
   text-decoration: none;
   display: block;
   color: black;

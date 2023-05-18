@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
 import { Socials } from '../socials/Socials';
-import { HeaderItems } from './Header.content';
+import { headerLinks } from './Header.content';
 import {
   AppLogo,
-  HeaderItem,
+  HeaderLink,
   HeaderWrapper,
   LinksWrapper,
 } from './Header.styled';
@@ -28,10 +28,15 @@ const Header = () => {
       </AppLogo>
       <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       <LinksWrapper isOpen={isOpen}>
-        {HeaderItems.map(({ title, link }) => (
-          <HeaderItem key={title} href={link}>
+        {headerLinks.map(({ title, link, newTab }) => (
+          <HeaderLink
+            key={link}
+            to={link}
+            target={newTab ? '_blank' : ''}
+            rel="noopener noreferrer"
+          >
             {title}
-          </HeaderItem>
+          </HeaderLink>
         ))}
         <Socials />
       </LinksWrapper>

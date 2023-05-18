@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const SocialsWrapper = styled.div`
@@ -7,7 +8,7 @@ export const SocialsWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-export const SocialLink = styled.a`
+export const SocialLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
