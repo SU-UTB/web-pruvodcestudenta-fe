@@ -9,6 +9,7 @@ export const FooterWrapper = styled.footer`
   align-items: center;
   flex-direction: column;
   gap: 4rem;
+  margin-top: auto;
 `;
 
 export const FooterLinksWrapper = styled.div`
