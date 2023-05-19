@@ -1,6 +1,5 @@
 import { Page } from '../components/Page';
 import Header from '../components/header/Header';
-import Footer from '../components/layout/footer/Footer';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import GuideSection from '../components/main/guideSection/GuideSection';
 import { RectorSection } from '../components/main/rector/RectorSection';
@@ -19,7 +18,6 @@ const Main = () => {
           <Splash />
           <GuideSection />
           <RectorSection />
-          <Footer />
         </>
       )}
     </Page>
