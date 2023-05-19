@@ -11,7 +11,7 @@ export const FooterWrapper = styled.footer`
   gap: 4rem;
 `;
 
-export const FooterSocialsWrapper = styled.div`
+export const FooterLinksWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
