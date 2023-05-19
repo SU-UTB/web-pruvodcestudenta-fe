@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Socials } from '../socials/Socials';
+import { Socials } from '../../socials/Socials';
 import { headerLinks } from './Header.content';
 import {
   AppLogo,
@@ -10,7 +10,7 @@ import {
 } from './Header.styled';
 
 import { useState } from 'react';
-import utb from '../../assets/icons/utb.svg';
+import utb from '../../../assets/icons/utb.svg';
 import HamburgerButton from './hamburger/HamburgerButton';
 
 const AppName = 'Průvodce studenta';

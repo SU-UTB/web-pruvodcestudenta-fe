@@ -1,4 +1,4 @@
-import { ILink } from '../../lib/interfaces/ILink';
+import { ILink } from '../../../lib/interfaces/ILink';
 
 export const headerLinks: Array<ILink> = [
   { title: 'UTB.cz', link: 'https://www.utb.cz', newTab: true },
