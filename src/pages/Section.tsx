@@ -1,9 +1,8 @@
 import { useParams } from 'react-router-dom';
 
-import { Page } from '../components/Page';
 import { BackButton } from '../components/buttons/BackButton';
 import { MoreContents } from '../components/contents/MoreContents';
-import Header from '../components/header/Header';
+import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Description } from '../components/section/description/Description';
 import { Splash } from '../components/splash/Splash';
@@ -14,17 +13,16 @@ export const Section = () => {
   const { data: section, isLoading } = useFetchSection(parseInt(id));
 
   return (
-    <Page>
+    <BaseLayout>
       {isLoading && <LoadingSpinner />}
       {!isLoading && (
         <>
-          <Header />
           <Splash sectionBgColor={section!.bgColor} title={section!.title} />
           <Description description={section!.description} />
           <MoreContents data={section!.topics} />
           <BackButton />
         </>
       )}
-    </Page>
+    </BaseLayout>
   );
 };

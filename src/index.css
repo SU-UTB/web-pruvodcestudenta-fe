@@ -30,12 +30,20 @@
 
 html,
 body {
-  position: relative;
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Satoshi, serif;
+}
+
+#root {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
 }
