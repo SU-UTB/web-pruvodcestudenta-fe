@@ -4,6 +4,8 @@ import {
   StyledLink,
 } from './GuideCard.styled';
 
+import { motion } from 'framer-motion';
+
 export interface IGuideCard {
   prefix: string;
   id: number;
@@ -20,11 +22,12 @@ export const GuideCard = ({
   bgColor,
 }: IGuideCard) => {
   return (
-    //TODO replace?
-    <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
-      <GuideCardWrapper bgColor={bgColor}>
-        <GuideCardHeadline>{title}</GuideCardHeadline>
-      </GuideCardWrapper>
-    </StyledLink>
+    <motion.div layout>
+      <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
+        <GuideCardWrapper bgColor={bgColor}>
+          <GuideCardHeadline>{title}</GuideCardHeadline>
+        </GuideCardWrapper>
+      </StyledLink>
+    </motion.div>
   );
 };
