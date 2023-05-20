@@ -1,6 +1,6 @@
 import { SearchInput } from './SearchInput.styled';
 import { SearchInputForm } from './SearchInputForm.styled';
-import { SearchSectionWrapper } from './SearchSectionWrapper.styled';
+import { SearchWrapper } from './SearchSectionWrapper.styled';
 import FilterButton from './filterButton/FilterButton';
 import SearchButton from './searchButton/SearchButton';
 
@@ -21,7 +21,7 @@ interface Props {
 
 export const SearchSection = ({ value, setValue, handleSubmit }: Props) => {
   return (
-    <SearchSectionWrapper>
+    <SearchWrapper>
       <FilterButton />
       <SearchInputForm onSubmit={handleSubmit}>
         <SearchInput
@@ -34,6 +34,6 @@ export const SearchSection = ({ value, setValue, handleSubmit }: Props) => {
       </SearchInputForm>
       {/* TODO: Put searchtags into the filter (filter modal) */}
       {/* <SearchTags pickedTags={tags} /> */}
-    </SearchSectionWrapper>
+    </SearchWrapper>
   );
 };

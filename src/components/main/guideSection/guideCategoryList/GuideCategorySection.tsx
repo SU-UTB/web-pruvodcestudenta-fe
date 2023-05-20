@@ -2,9 +2,9 @@ import { ISection } from '../../../../interfaces/ISection';
 import { GuideCard } from '../../../guideCard/GuideCard';
 import { GuideCategoryWrapper } from './GuideCategoryWrapper.styled';
 import { GuideCatedoryHeader } from './header/GuideCatedoryHeader';
-import { GuideCategoryListMore } from './more/GuideCategoryListMore';
 
 import { motion } from 'framer-motion';
+import GuideCategoryShowMoreButton from './expandCategoryListButton/ExpandCategoryListButton';
 
 interface Props {
   sections: ISection[];
@@ -27,7 +27,6 @@ export const GuideCategorySection = ({ sections }: Props) => {
           ))}
         </GuideCategoryWrapper>
       </motion.div>
-      <GuideCategoryListMore />
     </>
   );
 };
