@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const ExpandCategoryListButtonStyled = styled.button`
+interface ExpandCategoryListButtonStyledProps {
+  isExpanded: boolean;
+}
+
+export const ExpandCategoryListButtonStyled = styled.button<ExpandCategoryListButtonStyledProps>`
   background: transparent;
   border: none;
   margin-top: 2rem;
@@ -13,4 +17,10 @@ export const ExpandCategoryListButtonStyled = styled.button`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+
+  svg {
+    transition: transform 0.4s;
+    transform: ${({ isExpanded }) =>
+      isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'};
+  }
 `;

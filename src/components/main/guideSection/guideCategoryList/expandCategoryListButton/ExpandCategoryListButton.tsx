@@ -7,7 +7,10 @@ interface Props {
 
 const ExpandCategoryListButton = ({ setIsExpanded, isExpanded }: Props) => {
   return (
-    <ExpandCategoryListButtonStyled onClick={() => setIsExpanded(!isExpanded)}>
+    <ExpandCategoryListButtonStyled
+      isExpanded={isExpanded}
+      onClick={() => setIsExpanded(!isExpanded)}
+    >
       <svg
         width="22"
         height="13"
@@ -17,7 +20,7 @@ const ExpandCategoryListButton = ({ setIsExpanded, isExpanded }: Props) => {
       >
         <path d="M21 1L11 11L1 0.999999" stroke="black" strokeWidth="2" />
       </svg>
-      Více
+      <span>{isExpanded ? 'Méně' : 'Více'}</span>
     </ExpandCategoryListButtonStyled>
   );
 };
