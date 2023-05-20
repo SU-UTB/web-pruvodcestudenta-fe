@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 import orangeImg from '../../assets/images/tables/orange.svg';
 
-type GuideCardWrapperProps = {
+interface GuideCardWrapperProps {
   bgColor?: string;
-};
+}
 
 export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
   width: 258px;
