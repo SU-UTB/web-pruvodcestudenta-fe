@@ -19,5 +19,8 @@ export const CookieBannerWrapper = styled.div`
 export const CookieButtonsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    gap: 2rem;
+  }
 `;

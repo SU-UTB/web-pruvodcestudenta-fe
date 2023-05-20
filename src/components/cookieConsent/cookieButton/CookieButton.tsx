@@ -1,12 +1,25 @@
-import { CookieButtonStyled } from './CookieButton.styled';
+import { CookieButtonProps, CookieButtonStyled } from './CookieButton.styled';
 
-interface Props {
+interface Props extends CookieButtonProps {
   text: string;
   handleAction: () => void;
 }
 
-const CookieButton = ({ text, handleAction }: Props) => {
-  return <CookieButtonStyled onClick={handleAction}>{text}</CookieButtonStyled>;
+const CookieButton = ({
+  text,
+  handleAction,
+  textColor,
+  backgroundColor,
+}: Props) => {
+  return (
+    <CookieButtonStyled
+      onClick={handleAction}
+      textColor={textColor}
+      backgroundColor={backgroundColor}
+    >
+      {text}
+    </CookieButtonStyled>
+  );
 };
 
 export default CookieButton;

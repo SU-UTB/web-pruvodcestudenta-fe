@@ -42,12 +42,16 @@ const CookieBanner = ({ onAcceptCookies, onDeclineCookies }: Props) => {
               handleAction={() => {
                 handleDeclineCookies();
               }}
+              textColor=""
+              backgroundColor="transparent"
             />
             <CookieButton
               text="Přijmout"
               handleAction={() => {
                 handleAcceptCookies();
               }}
+              textColor="#ffffff"
+              backgroundColor="#fc8032"
             />
           </CookieButtonsWrapper>
         </CookieBannerWrapper>

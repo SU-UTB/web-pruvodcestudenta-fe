@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { CookieContentWrapper } from './CookieContent.styled';
+import { CookieContentWrapper, CookieLink } from './CookieContent.styled';
 
 const CookieContent = () => {
   return (
@@ -8,7 +7,7 @@ const CookieContent = () => {
         Pro správnou funkci tohoto webu, měření návštěvnosti a personalizaci
         reklam používáme soubory cookies.
       </p>
-      <Link to="/cookies">Více o cookies</Link>
+      <CookieLink to="/cookies">Více o cookies</CookieLink>
     </CookieContentWrapper>
   );
 };
