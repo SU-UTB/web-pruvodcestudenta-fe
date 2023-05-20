@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
+import { CookieContentWrapper } from './CookieContent.styled';
 
 const CookieContent = () => {
   return (
-    <div className="cookie-content">
+    <CookieContentWrapper className="cookie-content">
       <p>
         Pro správnou funkci tohoto webu, měření návštěvnosti a personalizaci
         reklam používáme soubory cookies.
       </p>
       <Link to="/cookies">Více o cookies</Link>
-    </div>
+    </CookieContentWrapper>
   );
 };
 

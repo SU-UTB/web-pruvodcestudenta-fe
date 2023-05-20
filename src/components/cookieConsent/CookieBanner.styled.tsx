@@ -9,6 +9,11 @@ export const CookieBannerWrapper = styled.div`
   flex-direction: column;
   padding: 2rem;
   z-index: 2;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  max-width: 600px;
+  width: 90%;
 `;
 
 export const CookieButtonsWrapper = styled.div`

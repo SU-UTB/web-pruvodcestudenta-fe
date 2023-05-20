@@ -4,9 +4,9 @@ import {
   CookieBannerWrapper,
   CookieButtonsWrapper,
 } from './CookieBanner.styled';
-import CookieContent from './CookieContent';
-import CookieHeader from './CookieHeader';
+import CookieContent from './content/CookieContent';
 import CookieButton from './cookieButton/CookieButton';
+import CookieHeader from './header/CookieHeader';
 
 interface Props {
   onAcceptCookies: () => void;
