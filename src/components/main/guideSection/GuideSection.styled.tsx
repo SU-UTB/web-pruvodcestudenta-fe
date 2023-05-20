@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-export const MoreWrapper = styled.div`
-  margin: 36px 0;
+export const GuideSectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  width: 100%;
 `;
