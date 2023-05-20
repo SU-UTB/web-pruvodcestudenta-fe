@@ -5,5 +5,6 @@ export const GuideCategoryWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 21px;
-  margin: 0 100px;
+  max-width: 1200px;
+  padding: 0 1rem;
 `;
