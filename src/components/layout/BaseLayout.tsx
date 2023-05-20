@@ -1,3 +1,4 @@
+import CookieBanner from '../cookieConsent/CookieBanner';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 
@@ -8,6 +9,7 @@ interface Props {
 export const BaseLayout = ({ children }: Props) => {
   return (
     <>
+      <CookieBanner onAcceptCookies={() => {}} onDeclineCookies={() => {}} />
       <Header />
       <main>{children}</main>
       <Footer />

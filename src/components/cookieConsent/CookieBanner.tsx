@@ -19,40 +19,40 @@ const CookieBanner = ({ onAcceptCookies, onDeclineCookies }: Props) => {
   );
 
   const handleDeclineCookies = () => {
-    Cookies.set('cookieConsent', 'true', { expires: 365 });
+    Cookies.set('cookieConsent', 'false', { expires: 365, path: '/' });
     setShowCookieBanner(false);
     onDeclineCookies();
   };
 
   const handleAcceptCookies = () => {
-    Cookies.set('cookieConsent', 'true', { expires: 365 });
+    Cookies.set('cookieConsent', 'true', { expires: 365, path: '/' });
     setShowCookieBanner(false);
     onAcceptCookies();
   };
 
-  if (!showCookieBanner) {
-    return;
-  }
-
   return (
-    <CookieBannerWrapper>
-      <CookieHeader />
-      <CookieContent />
-      <CookieButtonsWrapper>
-        <CookieButton
-          text="Odmítnout"
-          handleAction={() => {
-            handleDeclineCookies;
-          }}
-        />
-        <CookieButton
-          text="Přijmout"
-          handleAction={() => {
-            handleAcceptCookies;
-          }}
-        />
-      </CookieButtonsWrapper>
-    </CookieBannerWrapper>
+    <>
+      {showCookieBanner && (
+        <CookieBannerWrapper>
+          <CookieHeader />
+          <CookieContent />
+          <CookieButtonsWrapper>
+            <CookieButton
+              text="Odmítnout"
+              handleAction={() => {
+                handleDeclineCookies();
+              }}
+            />
+            <CookieButton
+              text="Přijmout"
+              handleAction={() => {
+                handleAcceptCookies();
+              }}
+            />
+          </CookieButtonsWrapper>
+        </CookieBannerWrapper>
+      )}
+    </>
   );
 };
 
