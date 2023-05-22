@@ -1,10 +1,10 @@
 import { AxiosInstance } from 'axios';
 import { PAGES_LANDING } from '../../lib/constants';
+import { IGuideCategory } from '../../lib/interfaces/IGuideCategory';
 import { ISearchTag } from '../../lib/interfaces/ISearchTag';
-import { ISection } from '../../lib/interfaces/ISection';
 
 export interface ILanding {
-  sections: Array<ISection>;
+  sections: Array<IGuideCategory>;
   searchTags: Array<ISearchTag>;
 }
 

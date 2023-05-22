@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import { API_BASE_URL } from '../lib/constants';
-import { ApiSections } from './ApiSections';
+import { ApiGuideCategoryList } from './ApiGuideCategoryList';
 import { ApiTopics } from './ApiTopics';
 import { ApiLanding } from './pages/ApiLanding';
 
@@ -18,7 +18,8 @@ export class Api {
     baseURL: API_BASE_URL,
   });
 
-  sections: ApiSections = new ApiSections(this.#client);
+  // TODO: rename sections after the backend implementation is done
+  sections: ApiGuideCategoryList = new ApiGuideCategoryList(this.#client);
   topics: ApiTopics = new ApiTopics(this.#client);
   pagesLanding: ApiLanding = new ApiLanding(this.#client);
 }

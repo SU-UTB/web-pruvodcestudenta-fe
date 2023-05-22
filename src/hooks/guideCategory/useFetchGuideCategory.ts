@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Api } from '../../api/Api';
-import { ISection } from '../../lib/interfaces/ISection';
+import { IGuideCategory } from '../../lib/interfaces/IGuideCategory';
 
-const useFetchSections = () => {
-  const [data, setData] = useState<ISection[]>([]);
+const useFetchGuideCategory = (id: number) => {
+  const [data, setData] = useState<IGuideCategory>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -12,8 +12,8 @@ const useFetchSections = () => {
 
     const getData = async () => {
       try {
-        const { data } = await Api.Instance.sections.getSections();
-        setData(data);
+        const guideCategory = await Api.Instance.sections.getGuideCategory(id);
+        setData(guideCategory);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
@@ -33,4 +33,4 @@ const useFetchSections = () => {
   return { data, isLoading, error };
 };
 
-export default useFetchSections;
+export default useFetchGuideCategory;

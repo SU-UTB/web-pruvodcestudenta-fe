@@ -1,5 +1,5 @@
 import { useContext, useMemo, useState } from 'react';
-import { SectionsContext } from '../../../contexts/SectionsContext';
+import { GuideCategoryListContext } from '../../../contexts/GuideCategoryListContext';
 import { CATEGORY_LIST_LIMIT } from '../../../lib/constants';
 import { normalizeText } from '../../../utils/normalizeText';
 import { GuideSectionWrapper } from './GuideSection.styled';
@@ -9,7 +9,7 @@ import { SearchSection } from './search/SearchSection';
 
 const GuideSection = () => {
   const [query, setQuery] = useState<string>('');
-  const [guideCategoryList] = useContext(SectionsContext);
+  const [guideCategoryList] = useContext(GuideCategoryListContext);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const filteredGuideCategoryList = useMemo(() => {
@@ -29,7 +29,7 @@ const GuideSection = () => {
         setValue={setQuery}
         handleSubmit={() => {}}
       />
-      <GuideCategorySection sections={filteredGuideCategoryList} />
+      <GuideCategorySection guideCategoryList={filteredGuideCategoryList} />
       <GuideCategoryShowMoreButton
         setIsExpanded={setIsExpanded}
         isExpanded={isExpanded}

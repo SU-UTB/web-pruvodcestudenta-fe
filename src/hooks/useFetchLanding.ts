@@ -1,16 +1,18 @@
 import { useContext, useEffect, useState } from 'react';
 import { Api } from '../api/Api';
 import { ILanding } from '../api/pages/ApiLanding';
-import { SectionsContext } from '../contexts/SectionsContext';
+import { GuideCategoryListContext } from '../contexts/GuideCategoryListContext';
 
 const useFetchLanding = () => {
   const [data, setData] = useState<ILanding>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [sections, setSections] = useContext(SectionsContext);
+  const [guideCategoryList, setGuideCategoryList] = useContext(
+    GuideCategoryListContext,
+  );
 
   useEffect(() => {
-    if (sections.length !== 0) {
+    if (guideCategoryList.length !== 0) {
       setIsLoading(false);
       return;
     }
@@ -20,7 +22,7 @@ const useFetchLanding = () => {
       try {
         const { data: landing } = await Api.Instance.pagesLanding.getLanding();
         setData(landing);
-        setSections(landing.sections);
+        setGuideCategoryList(landing.sections);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
