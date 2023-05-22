@@ -39,7 +39,7 @@ export const LinksWrapper = styled.div<LinksWrapperProps>`
   position: absolute;
   transition: transform 0.3s ease-in-out;
   top: 60px;
-  transform: translateX(${(props) => (props.isOpen ? '0' : '100vw')});
+  transform: translateX(${({ isOpen }) => (isOpen ? '0' : '100vw')});
   width: 100%;
   background: #ffffff;
   padding: 20px 0;
