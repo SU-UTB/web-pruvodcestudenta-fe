@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Api } from '../../api/Api';
-import { ISection } from '../../interfaces/ISection';
+import { ISection } from '../../lib/interfaces/ISection';
 
 const useFetchSection = (id: number) => {
   const [data, setData] = useState<ISection>();

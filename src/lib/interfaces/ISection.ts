@@ -1,4 +1,4 @@
-import { IContent } from '../lib/interfaces/IContent';
+import { IContent } from './IContent';
 
 export interface ISection extends IContent {
   topics: IContent[];

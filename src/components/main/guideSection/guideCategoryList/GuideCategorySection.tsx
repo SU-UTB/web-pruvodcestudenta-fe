@@ -1,4 +1,4 @@
-import { ISection } from '../../../../interfaces/ISection';
+import { ISection } from '../../../../lib/interfaces/ISection';
 import { GuideCard } from '../../../guideCard/GuideCard';
 import { GuideCategoryWrapper } from './GuideCategoryWrapper.styled';
 import { GuideCatedoryHeader } from './header/GuideCatedoryHeader';

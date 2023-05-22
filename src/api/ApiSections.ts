@@ -1,8 +1,8 @@
 import { AxiosInstance } from 'axios';
 
-import { Constants } from '../tools/Constants';
-import { ISection } from '../interfaces/ISection';
 import { IContent } from '../lib/interfaces/IContent';
+import { ISection } from '../lib/interfaces/ISection';
+import { Constants } from '../tools/Constants';
 
 export class ApiSections {
   #client: AxiosInstance;

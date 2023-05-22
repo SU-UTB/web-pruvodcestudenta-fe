@@ -4,7 +4,7 @@ Used only because of missing api
 */
 
 import { createContext, Dispatch, SetStateAction, useState } from 'react';
-import { ISection } from '../interfaces/ISection';
+import { ISection } from '../lib/interfaces/ISection';
 
 type ISectionsContext = [ISection[], Dispatch<SetStateAction<ISection[]>>];
 

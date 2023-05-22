@@ -1,7 +1,7 @@
 import { AxiosInstance } from 'axios';
+import { ISearchTag } from '../../lib/interfaces/ISearchTag';
+import { ISection } from '../../lib/interfaces/ISection';
 import { Constants } from '../../tools/Constants';
-import { ISection } from '../../interfaces/ISection';
-import { ISearchTag } from '../../interfaces/ISearchTag';
 
 export interface ILanding {
   sections: Array<ISection>;
