@@ -6,7 +6,7 @@ import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Splash } from '../components/splash/Splash';
 import useFetchTopic from '../hooks/guideCategory/useFetchTopic';
 
-const Detail = () => {
+const TopicDetail = () => {
   const { detailId = '0' } = useParams();
   const { data: topic, isLoading } = useFetchTopic(parseInt(detailId));
 
@@ -25,4 +25,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default TopicDetail;
