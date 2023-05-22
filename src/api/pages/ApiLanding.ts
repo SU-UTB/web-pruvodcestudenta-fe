@@ -1,7 +1,7 @@
 import { AxiosInstance } from 'axios';
+import { PAGES_LANDING } from '../../lib/constants';
 import { ISearchTag } from '../../lib/interfaces/ISearchTag';
 import { ISection } from '../../lib/interfaces/ISection';
-import { Constants } from '../../tools/Constants';
 
 export interface ILanding {
   sections: Array<ISection>;
@@ -16,6 +16,6 @@ export class ApiLanding {
   }
 
   getLanding = async () => {
-    return await this.#client.get<ILanding>(Constants.PAGES_LANDING);
+    return await this.#client.get<ILanding>(PAGES_LANDING);
   };
 }

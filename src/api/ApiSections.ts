@@ -1,8 +1,8 @@
 import { AxiosInstance } from 'axios';
 
+import { SECTIONS } from '../lib/constants';
 import { IContent } from '../lib/interfaces/IContent';
 import { ISection } from '../lib/interfaces/ISection';
-import { Constants } from '../tools/Constants';
 
 export class ApiSections {
   #client: AxiosInstance;
@@ -12,12 +12,10 @@ export class ApiSections {
   }
 
   getSections = async () => {
-    return await this.#client.get<Array<ISection>>(Constants.SECTIONS);
+    return await this.#client.get<Array<ISection>>(SECTIONS);
   };
   getSection = async (id: number) => {
-    const response = await this.#client.get<Object, any>(
-      `${Constants.SECTIONS}/${id}`,
-    );
+    const response = await this.#client.get<Object, any>(`${SECTIONS}/${id}`);
     const model: Section = {
       ...response.data.section,
       topics: response.data.topics,

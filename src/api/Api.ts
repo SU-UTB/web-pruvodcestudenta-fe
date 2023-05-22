@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
+import { API_BASE_URL } from '../lib/constants';
 import { ApiSections } from './ApiSections';
-import { Constants } from '../tools/Constants';
-import { ApiLanding } from './pages/ApiLanding';
 import { ApiTopics } from './ApiTopics';
+import { ApiLanding } from './pages/ApiLanding';
 
 export class Api {
   private static _instance: Api;
@@ -15,7 +15,7 @@ export class Api {
   }
 
   #client: AxiosInstance = axios.create({
-    baseURL: Constants.API_BASE_URL,
+    baseURL: API_BASE_URL,
   });
 
   sections: ApiSections = new ApiSections(this.#client);
