@@ -7,6 +7,7 @@ import {
   HeaderLink,
   HeaderWrapper,
   LinksWrapper,
+  LogoHamburgerWrapper,
 } from './Header.styled';
 
 import { useState } from 'react';
@@ -22,11 +23,14 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <AppLogo onClick={() => navigate('/')}>
-        <img src={utb} alt="utb_logo" />
-        {AppName}
-      </AppLogo>
-      <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      <LogoHamburgerWrapper>
+        <AppLogo onClick={() => navigate('/')}>
+          <img src={utb} alt="utb_logo" />
+          {AppName}
+        </AppLogo>
+        <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      </LogoHamburgerWrapper>
+
       <LinksWrapper isOpen={isOpen}>
         {headerLinks.map(({ title, link, newTab }) => (
           <HeaderLink
