@@ -1,10 +1,10 @@
 import { AxiosInstance } from 'axios';
-import { Constants } from '../../tools/Constants';
-import { ISection } from '../../interfaces/ISection';
-import { ISearchTag } from '../../interfaces/ISearchTag';
+import { PAGES_LANDING } from '../../lib/constants';
+import { IGuideCategory } from '../../lib/interfaces/IGuideCategory';
+import { ISearchTag } from '../../lib/interfaces/ISearchTag';
 
 export interface ILanding {
-  sections: Array<ISection>;
+  sections: Array<IGuideCategory>;
   searchTags: Array<ISearchTag>;
 }
 
@@ -16,6 +16,6 @@ export class ApiLanding {
   }
 
   getLanding = async () => {
-    return await this.#client.get<ILanding>(Constants.PAGES_LANDING);
+    return await this.#client.get<ILanding>(PAGES_LANDING);
   };
 }

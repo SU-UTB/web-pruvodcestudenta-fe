@@ -1,6 +1,6 @@
 import { AxiosInstance } from 'axios';
 
-import { Constants } from '../tools/Constants';
+import { TOPICS } from '../lib/constants';
 import { IContent } from '../lib/interfaces/IContent';
 
 export class ApiTopics {
@@ -11,9 +11,9 @@ export class ApiTopics {
   }
 
   getTopics = async () => {
-    return await this.#client.get<Array<IContent>>(Constants.TOPICS);
+    return await this.#client.get<Array<IContent>>(TOPICS);
   };
   getTopic = async (id: number) => {
-    return await this.#client.get<IContent>(`${Constants.TOPICS}/${id}`);
+    return await this.#client.get<IContent>(`${TOPICS}/${id}`);
   };
 }

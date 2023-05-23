@@ -6,22 +6,18 @@ interface LinksWrapperProps {
 }
 
 export const HeaderWrapper = styled.header`
-  height: 60px;
+  min-height: 60px;
   max-width: 100%;
-  padding: 0 20px;
   background-color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
   border-radius: 0 0 16px 16px;
   position: relative;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    flex-direction: row;
-    justify-content: space-between;
     padding: 0 60px;
+    justify-content: space-between;
   }
 `;
 
@@ -39,7 +35,7 @@ export const LinksWrapper = styled.div<LinksWrapperProps>`
   position: absolute;
   transition: transform 0.3s ease-in-out;
   top: 60px;
-  transform: translateX(${(props) => (props.isOpen ? '0' : '100vw')});
+  transform: translateX(${({ isOpen }) => (isOpen ? '0' : '100vw')});
   width: 100%;
   background: #ffffff;
   padding: 20px 0;
@@ -56,11 +52,19 @@ export const LinksWrapper = styled.div<LinksWrapperProps>`
 export const AppLogo = styled.div`
   display: flex;
   align-items: center;
-  align-self: start;
   cursor: pointer;
   gap: 0 30px;
+`;
+
+export const LogoHamburgerWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    align-self: center;
+    width: max-content;
+    padding: 0;
   }
 `;

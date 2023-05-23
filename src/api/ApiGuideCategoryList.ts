@@ -1,24 +1,22 @@
 import { AxiosInstance } from 'axios';
 
-import { Constants } from '../tools/Constants';
-import { ISection } from '../interfaces/ISection';
+import { SECTIONS } from '../lib/constants';
 import { IContent } from '../lib/interfaces/IContent';
+import { IGuideCategory } from '../lib/interfaces/IGuideCategory';
 
-export class ApiSections {
+export class ApiGuideCategoryList {
   #client: AxiosInstance;
 
   constructor(client: AxiosInstance) {
     this.#client = client;
   }
 
-  getSections = async () => {
-    return await this.#client.get<Array<ISection>>(Constants.SECTIONS);
+  getGuideCategoryList = async () => {
+    return await this.#client.get<Array<IGuideCategory>>(SECTIONS);
   };
-  getSection = async (id: number) => {
-    const response = await this.#client.get<Object, any>(
-      `${Constants.SECTIONS}/${id}`,
-    );
-    const model: Section = {
+  getGuideCategory = async (id: number) => {
+    const response = await this.#client.get<Object, any>(`${SECTIONS}/${id}`);
+    const model: GuideCategory = {
       ...response.data.section,
       topics: response.data.topics,
     };
@@ -26,7 +24,7 @@ export class ApiSections {
   };
 }
 
-class Section implements ISection {
+class GuideCategory implements IGuideCategory {
   bgColor: string;
   description: string;
   id: number;
