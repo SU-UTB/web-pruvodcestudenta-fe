@@ -8,12 +8,7 @@ import CookieContent from './content/CookieContent';
 import CookieButton from './cookieButton/CookieButton';
 import CookieHeader from './header/CookieHeader';
 
-interface Props {
-  onAcceptCookies: () => void;
-  onDeclineCookies: () => void;
-}
-
-const CookieBanner = ({ onAcceptCookies, onDeclineCookies }: Props) => {
+const CookieBanner = () => {
   const [showCookieBanner, setShowCookieBanner] = useState<boolean>(
     !Cookies.get('cookieConsent'),
   );
@@ -21,13 +16,11 @@ const CookieBanner = ({ onAcceptCookies, onDeclineCookies }: Props) => {
   const handleDeclineCookies = () => {
     Cookies.set('cookieConsent', 'false', { expires: 365, path: '/' });
     setShowCookieBanner(false);
-    onDeclineCookies();
   };
 
   const handleAcceptCookies = () => {
     Cookies.set('cookieConsent', 'true', { expires: 365, path: '/' });
     setShowCookieBanner(false);
-    onAcceptCookies();
   };
 
   return (

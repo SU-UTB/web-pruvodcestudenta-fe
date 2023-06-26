@@ -14,4 +14,5 @@ export const CookieButtonStyled = styled.button<CookieButtonProps>`
   border-color: ${({ textColor }) => textColor || '#000000'};
   color: ${({ textColor }) => textColor || '#000000'};
   background-color: ${({ backgroundColor }) => backgroundColor || '#EFEFEFE'};
+  cursor: pointer;
 `;
