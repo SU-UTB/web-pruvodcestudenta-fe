@@ -15,7 +15,7 @@ export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  background: ${({ bgColor }) => bgColor || '#ffdec9'} url(${orangeImg})
+  background: ${({ bgColor }) => bgColor || '#ffdec9'};
     no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
