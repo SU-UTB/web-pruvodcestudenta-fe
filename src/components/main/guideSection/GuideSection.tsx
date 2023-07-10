@@ -4,7 +4,7 @@ import { CATEGORY_LIST_LIMIT } from '../../../lib/constants';
 import { normalizeText } from '../../../utils/normalizeText';
 import { GuideSectionWrapper } from './GuideSection.styled';
 import { GuideCategorySection } from './guideCategoryList/GuideCategorySection';
-import GuideCategoryShowMoreButton from './guideCategoryList/expandCategoryListButton/ExpandCategoryListButton';
+import ExpandCategoryListButton from './guideCategoryList/expandCategoryListButton/ExpandCategoryListButton';
 import { SearchSection } from './search/SearchSection';
 
 const GuideSection = () => {
@@ -30,10 +30,12 @@ const GuideSection = () => {
         handleSubmit={() => {}}
       />
       <GuideCategorySection guideCategoryList={filteredGuideCategoryList} />
-      <GuideCategoryShowMoreButton
-        setIsExpanded={setIsExpanded}
-        isExpanded={isExpanded}
-      />
+      {filteredGuideCategoryList.length > 5 && (
+        <ExpandCategoryListButton
+          setIsExpanded={setIsExpanded}
+          isExpanded={isExpanded}
+        />
+      )}
     </GuideSectionWrapper>
   );
 };
