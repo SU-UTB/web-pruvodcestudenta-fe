@@ -15,11 +15,11 @@ const GuideCategory = () => {
   return (
     <BaseLayout>
       {isLoading && <LoadingSpinner />}
-      {!isLoading && (
+      {!isLoading && section && (
         <>
-          <Splash sectionBgColor={section!.bgColor} title={section!.title} />
-          <Description description={section!.description} />
-          <MoreContents data={section!.topics} />
+          <Splash sectionBgColor={section.bg_color} title={section.title} />
+          <Description description={section.description} />
+          <MoreContents data={section.topics} />
           <BackButton />
         </>
       )}
