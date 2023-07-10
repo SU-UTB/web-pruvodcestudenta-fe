@@ -13,6 +13,7 @@ const CookieButton = ({
 }: Props) => {
   return (
     <CookieButtonStyled
+      title={text}
       onClick={handleAction}
       textColor={textColor}
       backgroundColor={backgroundColor}
