@@ -9,7 +9,7 @@ interface Props {
 export const BaseLayout = ({ children }: Props) => {
   return (
     <>
-      <CookieBanner onAcceptCookies={() => {}} onDeclineCookies={() => {}} />
+      <CookieBanner />
       <Header />
       <main>{children}</main>
       <Footer />

@@ -16,17 +16,15 @@ export const GuideCategorySection = ({ guideCategoryList }: Props) => {
       <GuideCatedoryHeader />
       <motion.div layout>
         <GuideCategoryWrapper>
-          {guideCategoryList.map(
-            ({ title, id, link, bgColor, description }) => (
-              <GuideCard
-                key={id}
-                id={id}
-                title={title}
-                prefix={'sections'}
-                bgColor={bgColor}
-              />
-            ),
-          )}
+          {guideCategoryList.map(({ title, id, bg_color }) => (
+            <GuideCard
+              key={id}
+              id={id}
+              title={title}
+              prefix={'sections'}
+              bgColor={bg_color}
+            />
+          ))}
         </GuideCategoryWrapper>
       </motion.div>
     </>

@@ -25,7 +25,7 @@ export class ApiGuideCategoryList {
 }
 
 class GuideCategory implements IGuideCategory {
-  bgColor: string;
+  bg_color: string;
   description: string;
   id: number;
   link: string;
@@ -33,14 +33,14 @@ class GuideCategory implements IGuideCategory {
   topics: IContent[];
 
   constructor(
-    bgColor: string,
+    bg_color: string,
     description: string,
     id: number,
     link: string,
     title: string,
     topics: IContent[],
   ) {
-    this.bgColor = bgColor;
+    this.bg_color = bg_color;
     this.description = description;
     this.id = id;
     this.link = link;
