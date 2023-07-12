@@ -8,7 +8,7 @@ interface Props {
 
 const HamburgerButton = ({ isOpen, onClick }: Props) => {
   return (
-    <HamburgerButtonWrapper>
+    <HamburgerButtonWrapper title="hamburger-btn">
       <Hamburger toggled={isOpen} toggle={onClick} />
     </HamburgerButtonWrapper>
   );

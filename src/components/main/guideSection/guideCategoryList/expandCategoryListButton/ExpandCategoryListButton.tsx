@@ -8,6 +8,7 @@ interface Props {
 const ExpandCategoryListButton = ({ setIsExpanded, isExpanded }: Props) => {
   return (
     <ExpandCategoryListButtonStyled
+      title={`Zobrazit ${isExpanded ? 'Méně' : 'Více'}`}
       isExpanded={isExpanded}
       onClick={() => setIsExpanded(!isExpanded)}
     >

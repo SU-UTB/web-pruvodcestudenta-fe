@@ -6,6 +6,8 @@ export const BackButton = () => {
   const navigate = useNavigate();
 
   return (
-    <BackButtonWrapper onClick={() => navigate(-1)}>Zpět</BackButtonWrapper>
+    <BackButtonWrapper title="Zpět" onClick={() => navigate(-1)}>
+      Zpět
+    </BackButtonWrapper>
   );
 };

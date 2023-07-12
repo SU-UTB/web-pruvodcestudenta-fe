@@ -13,10 +13,10 @@ const TopicDetail = () => {
   return (
     <BaseLayout>
       {isLoading && <LoadingSpinner />}
-      {!isLoading && (
+      {!isLoading && topic && (
         <>
-          <Splash sectionBgColor={topic!.bgColor} title={topic!.title} />
-          <Description description={topic!.description} />
+          <Splash sectionBgColor={topic.bg_color} title={topic.title} />
+          <Description description={topic.description} />
           {/*<MoreContents data={topics} canReplace={true} />*/}
           <BackButton />
         </>

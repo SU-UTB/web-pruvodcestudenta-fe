@@ -2,7 +2,7 @@ import { FilterButtonWrapper } from './FilterButtonWrapper.styled';
 
 const FilterButton = () => {
   return (
-    <FilterButtonWrapper>
+    <FilterButtonWrapper title="filtrovat">
       Filtrovat
       <svg
         width="22"

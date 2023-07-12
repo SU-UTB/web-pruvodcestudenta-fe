@@ -1,5 +1,6 @@
 import styled from 'styled-components';
+import { Container } from '../../containers/Container.styled';
 
-export const DescriptionWrapper = styled.section`
-  margin: 48px 600px;
+export const DescriptionWrapper = styled(Container)`
+  padding: 2rem 1rem;
 `;
