@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Api } from '../../api/Api';
 import { IGuideCategory } from '../../lib/interfaces/IGuideCategory';
+import { api } from '../../configs/api';
+import { SECTIONS } from '../../lib/constants';
 
 const useFetchGuideCategoryList = () => {
   const [data, setData] = useState<IGuideCategory[]>([]);
@@ -12,8 +13,8 @@ const useFetchGuideCategoryList = () => {
 
     const getData = async () => {
       try {
-        const { data } = await Api.Instance.sections.getGuideCategoryList();
-        setData(data);
+        const { data: sections } = await api.get(SECTIONS);
+        setData(sections);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {

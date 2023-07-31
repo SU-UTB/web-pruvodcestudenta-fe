@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
-import { Api } from '../api/Api';
-import { ILanding } from '../api/pages/ApiLanding';
 import { GuideCategoryListContext } from '../contexts/GuideCategoryListContext';
+import { api } from '../configs/api';
+import { PAGES_LANDING } from '../lib/constants';
+import { ILanding } from '../lib/interfaces/ILanding';
 
 const useFetchLanding = () => {
   const [data, setData] = useState<ILanding>();
@@ -20,7 +21,7 @@ const useFetchLanding = () => {
 
     const getData = async () => {
       try {
-        const { data: landing } = await Api.Instance.pagesLanding.getLanding();
+        const { data: landing } = await api.get(PAGES_LANDING);
         setData(landing);
         setGuideCategoryList(landing.sections);
         setError(null);
