@@ -8,7 +8,7 @@ import { Description } from '../components/section/description/Description';
 import { Splash } from '../components/splash/Splash';
 import useFetchSection from '../hooks/guideCategory/useFetchGuideCategory';
 
-const GuideCategory = () => {
+const GuideSection = () => {
   const { id = '0' } = useParams();
   const { data: section, isLoading } = useFetchSection(parseInt(id));
 
@@ -27,4 +27,4 @@ const GuideCategory = () => {
   );
 };
 
-export default GuideCategory;
+export default GuideSection;
