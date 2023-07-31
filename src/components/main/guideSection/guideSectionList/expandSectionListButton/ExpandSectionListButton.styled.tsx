@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface ExpandCategoryListButtonStyledProps {
+interface ExpandSectionListButtonStyledProps {
   isExpanded: boolean;
 }
 
-export const ExpandCategoryListButtonStyled = styled.button<ExpandCategoryListButtonStyledProps>`
+export const ExpandSectionListButtonStyled = styled.button<ExpandSectionListButtonStyledProps>`
   background: transparent;
   border: none;
   margin-top: 2rem;

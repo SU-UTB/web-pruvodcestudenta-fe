@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { IGuideCategory } from '../../lib/interfaces/IGuideCategory';
-import { api } from '../../configs/api';
-import { SECTIONS } from '../../lib/constants';
 
-const useFetchGuideCategory = (id: number) => {
-  const [data, setData] = useState<IGuideCategory>();
+import { IContent } from '../../lib/interfaces/IContent';
+import { api } from '../../configs/api';
+import { TOPICS } from '../../lib/constants';
+
+const useFetchTopic = (id: number) => {
+  const [data, setData] = useState<IContent>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -13,8 +14,8 @@ const useFetchGuideCategory = (id: number) => {
 
     const getData = async () => {
       try {
-        const { data: section } = await api.get(`${SECTIONS}/${id}`);
-        setData(section);
+        const { data: topic } = await api.get(`${TOPICS}/${id}`);
+        setData(topic);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
@@ -34,4 +35,4 @@ const useFetchGuideCategory = (id: number) => {
   return { data, isLoading, error };
 };
 
-export default useFetchGuideCategory;
+export default useFetchTopic;

@@ -6,7 +6,7 @@ import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Description } from '../components/section/description/Description';
 import { Splash } from '../components/splash/Splash';
-import useFetchSection from '../hooks/guideCategory/useFetchGuideCategory';
+import useFetchSection from '../hooks/guideSection/useFetchGuideSection';
 
 const GuideSection = () => {
   const { id = '0' } = useParams();

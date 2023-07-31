@@ -1,6 +1,6 @@
-import { HeaderWrapper, StyledParagraph } from './GuideCatedoryHeader.styled';
+import { HeaderWrapper, StyledParagraph } from './GuideSectionHeader.styled';
 
-export const GuideCatedoryHeader = () => (
+export const GuideSectionHeader = () => (
   <HeaderWrapper>
     <StyledParagraph>Nevíš kudy kam? To je v pořádku.</StyledParagraph>
     <StyledParagraph>Přečti si vše důležité o UTB zde.</StyledParagraph>

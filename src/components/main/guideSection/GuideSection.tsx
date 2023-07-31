@@ -1,26 +1,25 @@
 import { useContext, useMemo, useState } from 'react';
-import { GuideCategoryListContext } from '../../../contexts/GuideCategoryListContext';
-import { CATEGORY_LIST_LIMIT } from '../../../lib/constants';
+
+import { GuideSectionListContext } from '../../../contexts/GuideSectionListContext';
+import { SECTION_LIST_LIMIT } from '../../../lib/constants';
 import { normalizeText } from '../../../utils/normalizeText';
 import { GuideSectionWrapper } from './GuideSection.styled';
-import { GuideCategorySection } from './guideCategoryList/GuideCategorySection';
-import ExpandCategoryListButton from './guideCategoryList/expandCategoryListButton/ExpandCategoryListButton';
+import { GuideSectionList } from './guideSectionList/GuideSectionList';
 import { SearchSection } from './search/SearchSection';
+import ExpandSectionListButton from './guideSectionList/expandSectionListButton/ExpandSectionListButton';
 
 const GuideSection = () => {
   const [query, setQuery] = useState<string>('');
-  const [guideCategoryList] = useContext(GuideCategoryListContext);
+  const [guideSectionList] = useContext(GuideSectionListContext);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-  const filteredGuideCategoryList = useMemo(() => {
-    return guideCategoryList
-      .filter((guideCategory) => {
-        return normalizeText(guideCategory.title).includes(
-          normalizeText(query),
-        );
+  const filteredGuideSectionList = useMemo(() => {
+    return guideSectionList
+      .filter((guideSection) => {
+        return normalizeText(guideSection.title).includes(normalizeText(query));
       })
-      .splice(0, isExpanded ? CATEGORY_LIST_LIMIT + 5 : CATEGORY_LIST_LIMIT);
-  }, [guideCategoryList, query, isExpanded]);
+      .splice(0, isExpanded ? SECTION_LIST_LIMIT + 5 : SECTION_LIST_LIMIT);
+  }, [guideSectionList, query, isExpanded]);
 
   return (
     <GuideSectionWrapper>
@@ -29,9 +28,9 @@ const GuideSection = () => {
         setValue={setQuery}
         handleSubmit={() => {}}
       />
-      <GuideCategorySection guideCategoryList={filteredGuideCategoryList} />
-      {filteredGuideCategoryList.length > 5 && (
-        <ExpandCategoryListButton
+      <GuideSectionList guideSectionList={filteredGuideSectionList} />
+      {filteredGuideSectionList.length > 5 && (
+        <ExpandSectionListButton
           setIsExpanded={setIsExpanded}
           isExpanded={isExpanded}
         />

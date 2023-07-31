@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { IContent } from '../../lib/interfaces/IContent';
-import { api } from '../../configs/api';
-import { TOPICS } from '../../lib/constants';
 
-const useFetchTopic = (id: number) => {
-  const [data, setData] = useState<IContent>();
+import { api } from '../../configs/api';
+import { SECTIONS } from '../../lib/constants';
+import { IGuideSection } from '../../lib/interfaces/IGuideSection';
+
+const useFetchGuideSection = (id: number) => {
+  const [data, setData] = useState<IGuideSection>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -13,8 +14,8 @@ const useFetchTopic = (id: number) => {
 
     const getData = async () => {
       try {
-        const { data: topic } = await api.get(`${TOPICS}/${id}`);
-        setData(topic);
+        const { data: section } = await api.get(`${SECTIONS}/${id}`);
+        setData(section);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
@@ -34,4 +35,4 @@ const useFetchTopic = (id: number) => {
   return { data, isLoading, error };
 };
 
-export default useFetchTopic;
+export default useFetchGuideSection;

@@ -4,7 +4,7 @@ import { Description } from '../components/detail/description/Description';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Splash } from '../components/splash/Splash';
-import useFetchTopic from '../hooks/guideCategory/useFetchTopic';
+import useFetchTopic from '../hooks/guideSection/useFetchTopic';
 
 const TopicDetail = () => {
   const { detailId = '0' } = useParams();
