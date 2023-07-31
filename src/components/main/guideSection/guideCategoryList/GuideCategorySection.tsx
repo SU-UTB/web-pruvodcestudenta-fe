@@ -21,7 +21,7 @@ export const GuideCategorySection = ({ guideCategoryList }: Props) => {
               key={id}
               id={id}
               title={title}
-              prefix={'sections'}
+              prefix={'sekce'}
               bgColor={bg_color}
             />
           ))}
