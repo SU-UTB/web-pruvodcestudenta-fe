@@ -1,12 +1,12 @@
 import {
-  GuideCardHeadline,
-  GuideCardWrapper,
+  SectionCardHeadline,
+  SectionCardWrapper,
   StyledLink,
-} from './GuideCard.styled';
+} from './SectionCard.styled';
 
 import { motion } from 'framer-motion';
 
-export interface IGuideCard {
+export interface ISectionCard {
   prefix: string;
   id: number;
   title: string;
@@ -14,19 +14,19 @@ export interface IGuideCard {
   bgColor?: string;
 }
 
-export const GuideCard = ({
+export const SectionCard = ({
   prefix,
   title,
   id,
   canReplace,
   bgColor,
-}: IGuideCard) => {
+}: ISectionCard) => {
   return (
     <motion.div layout>
       <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
-        <GuideCardWrapper bgColor={bgColor}>
-          <GuideCardHeadline>{title}</GuideCardHeadline>
-        </GuideCardWrapper>
+        <SectionCardWrapper bgColor={bgColor}>
+          <SectionCardHeadline>{title}</SectionCardHeadline>
+        </SectionCardWrapper>
       </StyledLink>
     </motion.div>
   );

@@ -1,13 +1,13 @@
-import { ExpandCategoryListButtonStyled } from './ExpandCategoryListButton.styled';
+import { ExpandSectionListButtonStyled } from './ExpandSectionListButton.styled';
 
 interface Props {
   setIsExpanded: (value: boolean) => void;
   isExpanded: boolean;
 }
 
-const ExpandCategoryListButton = ({ setIsExpanded, isExpanded }: Props) => {
+const ExpandSectionListButton = ({ setIsExpanded, isExpanded }: Props) => {
   return (
-    <ExpandCategoryListButtonStyled
+    <ExpandSectionListButtonStyled
       title={`Zobrazit ${isExpanded ? 'Méně' : 'Více'}`}
       isExpanded={isExpanded}
       onClick={() => setIsExpanded(!isExpanded)}
@@ -22,8 +22,8 @@ const ExpandCategoryListButton = ({ setIsExpanded, isExpanded }: Props) => {
         <path d="M21 1L11 11L1 0.999999" stroke="black" strokeWidth="2" />
       </svg>
       <span>{isExpanded ? 'Méně' : 'Více'}</span>
-    </ExpandCategoryListButtonStyled>
+    </ExpandSectionListButtonStyled>
   );
 };
 
-export default ExpandCategoryListButton;
+export default ExpandSectionListButton;

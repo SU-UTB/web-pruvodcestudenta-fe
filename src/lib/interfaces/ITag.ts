@@ -1,4 +1,4 @@
-export interface ISearchTag {
+export interface ITag {
   name: String;
   sectionId: number;
 }

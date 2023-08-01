@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchTag = styled.div`
+export const Tag = styled.div`
   min-width: 180px;
   height: 60px;
   background-color: white;

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 import orangeImg from '../../assets/images/tables/orange.svg';
 
-interface GuideCardWrapperProps {
+interface SectionCardWrapperProps {
   bgColor?: string;
 }
 
-export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
+export const SectionCardWrapper = styled.div<SectionCardWrapperProps>`
   width: 258px;
   height: 258px;
   border-radius: 8px;
@@ -21,7 +21,7 @@ export const GuideCardWrapper = styled.div<GuideCardWrapperProps>`
   color: black;
 `;
 
-export const GuideCardHeadline = styled.h4`
+export const SectionCardHeadline = styled.h4`
   font-size: 20px;
   padding: 16px 12px;
   text-align: center;

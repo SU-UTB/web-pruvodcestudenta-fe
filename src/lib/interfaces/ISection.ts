@@ -1,5 +1,5 @@
 import { IContent } from './IContent';
 
-export interface IGuideCategory extends IContent {
+export interface ISection extends IContent {
   topics: IContent[];
 }
