@@ -33,7 +33,7 @@ export const SearchSection = ({ value, setValue, handleSubmit }: Props) => {
         <SearchButton />
       </SearchInputForm>
       {/* TODO: Put searchtags into the filter (filter modal) */}
-      {/* <SearchTags pickedTags={tags} /> */}
+      {/* <Tags pickedTags={tags} /> */}
     </SearchWrapper>
   );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GuideSectionListWrapper = styled.div`
+export const SectionListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

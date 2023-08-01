@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GuideSectionWrapper = styled.section`
+export const SectionWrapperStyled = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

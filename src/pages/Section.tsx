@@ -6,9 +6,9 @@ import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Description } from '../components/section/description/Description';
 import { Splash } from '../components/splash/Splash';
-import useFetchSection from '../hooks/guideSection/useFetchGuideSection';
+import useFetchSection from '../hooks/section/useFetchSection';
 
-const GuideSection = () => {
+const Section = () => {
   const { id = '0' } = useParams();
   const { data: section, isLoading } = useFetchSection(parseInt(id));
 
@@ -27,4 +27,4 @@ const GuideSection = () => {
   );
 };
 
-export default GuideSection;
+export default Section;

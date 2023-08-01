@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 
 import { api } from '../../configs/api';
 import { SECTIONS } from '../../lib/constants';
-import { IGuideSection } from '../../lib/interfaces/IGuideSection';
+import { ISection } from '../../lib/interfaces/ISection';
 
-const useFetchGuideSectionList = () => {
-  const [data, setData] = useState<IGuideSection[]>([]);
+const useFetchSectionList = () => {
+  const [data, setData] = useState<ISection[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -35,4 +35,4 @@ const useFetchGuideSectionList = () => {
   return { data, isLoading, error };
 };
 
-export default useFetchGuideSectionList;
+export default useFetchSectionList;

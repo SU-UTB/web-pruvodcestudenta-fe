@@ -3,18 +3,18 @@ import { useContext, useEffect, useState } from 'react';
 import { api } from '../configs/api';
 import { PAGES_LANDING } from '../lib/constants';
 import { ILanding } from '../lib/interfaces/ILanding';
-import { GuideSectionListContext } from '../contexts/GuideSectionListContext';
+import { SectionListContext } from '../contexts/SectionListContext';
 
 const useFetchLanding = () => {
   const [data, setData] = useState<ILanding>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [guideSectonList, setGuideSectionList] = useContext(
-    GuideSectionListContext,
+  const [sectonList, setSectionList] = useContext(
+    SectionListContext,
   );
 
   useEffect(() => {
-    if (guideSectonList.length !== 0) {
+    if (sectonList.length !== 0) {
       setIsLoading(false);
       return;
     }
@@ -24,7 +24,7 @@ const useFetchLanding = () => {
       try {
         const { data: landing } = await api.get(PAGES_LANDING);
         setData(landing);
-        setGuideSectionList(landing.sections);
+        setSectionList(landing.sections);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {

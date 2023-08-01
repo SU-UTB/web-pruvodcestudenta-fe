@@ -1,7 +1,7 @@
-import { IGuideSection } from './IGuideSection';
-import { ISearchTag } from './ISearchTag';
+import { ISection } from './ISection';
+import { ITag } from './ITag';
 
 export interface ILanding {
-  sections: IGuideSection[];
-  searchTags: ISearchTag[];
+  sections: ISection[];
+  tags: ITag[];
 }
