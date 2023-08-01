@@ -1,17 +1,17 @@
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Routes } from './Routes';
-import { GuideCategoryListProvider } from './contexts/GuideCategoryListContext';
 import Theme from './styles/theme';
+import { SectionListProvider } from './contexts/SectionListContext';
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-      <GuideCategoryListProvider>
+      <SectionListProvider>
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
-      </GuideCategoryListProvider>
+      </SectionListProvider>
     </ThemeProvider>
   );
 }
