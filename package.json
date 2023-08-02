@@ -18,7 +18,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "react-spinners": "^0.13.8",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "swiper": "^10.1.0"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.3",
