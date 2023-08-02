@@ -7,13 +7,6 @@ export const Description = ({ description }: IDescription) => {
     <Container>
       <DescriptionWrapper>
         <DescriptionContent>{description}</DescriptionContent>
-        <DescriptionContent>
-          <p>?</p>
-          <p>Mapa</p>
-          <p>Odkazy</p>
-          <p>Video</p>
-          <p>Cokoliv</p>
-        </DescriptionContent>
       </DescriptionWrapper>
     </Container>
   );
