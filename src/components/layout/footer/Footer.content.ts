@@ -7,4 +7,9 @@ export const footerLinks: Array<ILink> = [
     link: 'https://play.google.com/store/apps/details?id=cz.unizone.utb&hl=cs&gl=US',
     newTab: true,
   },
+  {
+    title: 'UTB Mapa',
+    link: 'https://mapa.utb.cz/',
+    newTab: true,
+  },
 ];
