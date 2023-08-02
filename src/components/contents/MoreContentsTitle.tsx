@@ -1,5 +1,9 @@
 import { MoreContentsTitleWrapper } from './MoreContentsTitleWrapper.styled';
 
-export const MoreContentsTitle = () => {
-  return <MoreContentsTitleWrapper>Další</MoreContentsTitleWrapper>;
+interface MoreContentsTitleProps {
+  title: string
+}
+
+export const MoreContentsTitle = ({ title }: MoreContentsTitleProps) => {
+  return <MoreContentsTitleWrapper>{title}</MoreContentsTitleWrapper>;
 };
