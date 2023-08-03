@@ -17,7 +17,7 @@ const Section = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && section && (
         <>
-          <Splash sectionBgColor={section.bg_color} title={section.title} />
+          <Splash sectionBgColor={section.color} title={section.title} />
           <Description description={section.description} />
           <MoreContents data={section.topics} />
           <BackButton />
