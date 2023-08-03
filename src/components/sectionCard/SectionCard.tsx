@@ -11,7 +11,7 @@ export interface ISectionCard {
   id: number;
   title: string;
   canReplace?: boolean;
-  bgColor?: string;
+  color?: string;
 }
 
 export const SectionCard = ({
@@ -19,12 +19,12 @@ export const SectionCard = ({
   title,
   id,
   canReplace,
-  bgColor,
+  color,
 }: ISectionCard) => {
   return (
     <motion.div layout>
       <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
-        <SectionCardWrapper bgColor={bgColor}>
+        <SectionCardWrapper bgColor={color}>
           <SectionCardHeadline>{title}</SectionCardHeadline>
         </SectionCardWrapper>
       </StyledLink>

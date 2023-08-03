@@ -15,13 +15,13 @@ export const SectionList = ({ sectionList }: Props) => {
       <SectionHeader />
       <motion.div layout>
         <SectionListWrapper>
-          {sectionList.map(({ title, id, bg_color }) => (
+          {sectionList.map(({ title, id, color }) => (
             <SectionCard
               key={id}
               id={id}
               title={title}
               prefix="sekce"
-              bgColor={bg_color}
+              color={color}
             />
           ))}
         </SectionListWrapper>
