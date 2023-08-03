@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TopicsWrapperStyled = styled.section`
+export const CardSliderWrapperStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

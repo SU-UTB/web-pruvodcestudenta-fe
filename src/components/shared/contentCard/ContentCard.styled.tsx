@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 import orangeImg from '../../assets/images/tables/orange.svg';
 
-interface SectionCardWrapperProps {
+interface ContentCardWrapperProps {
   bgColor?: string;
 }
 
-export const SectionCardWrapper = styled.div<SectionCardWrapperProps>`
+export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
   width: 258px;
   height: 258px;
   border-radius: 8px;
@@ -21,7 +21,7 @@ export const SectionCardWrapper = styled.div<SectionCardWrapperProps>`
   color: black;
 `;
 
-export const SectionCardHeadline = styled.h4`
+export const ContentCardHeadline = styled.h4`
   font-size: 20px;
   padding: 16px 12px;
   text-align: center;

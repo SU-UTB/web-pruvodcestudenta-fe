@@ -4,9 +4,9 @@ import { BackButton } from '../components/shared/buttons/BackButton';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Description } from '../components/section/description/Description';
-import { Splash } from '../components/splash/Splash';
+import { SectionSplash } from '../components/section/splash/SectionSplash';
 import useFetchSection from '../hooks/section/useFetchSection';
-import { TopicsWrapper } from '../components/section/topics/TopicsWrapper';
+import { CardSlider } from '../components/shared/cardSlider/CardSlider';
 
 const Section = () => {
   const { id = '0' } = useParams();
@@ -17,9 +17,9 @@ const Section = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && section && (
         <>
-          <Splash sectionBgColor={section.color} title={section.title} />
+          <SectionSplash sectionBgColor={section.color} title={section.title} />
           <Description description={section.description} />
-          <TopicsWrapper topics={section.topics} />
+          <CardSlider title='Témy' contentCards={section.topics} prefix='detail' />
           <BackButton />
         </>
       )}

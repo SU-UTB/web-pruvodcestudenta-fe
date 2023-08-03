@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SplashWrapper = styled.section`
-  height: 240px;
+  height: 300px;
   background-color: #ff9f63;
   display: flex;
   flex-direction: column;
