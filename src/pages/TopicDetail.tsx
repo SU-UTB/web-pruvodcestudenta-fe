@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { BackButton } from '../components/buttons/BackButton';
+import { BackButton } from '../components/shared/buttons/BackButton';
 import { Description } from '../components/detail/description/Description';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
@@ -15,7 +15,7 @@ const TopicDetail = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && topic && (
         <>
-          <Splash sectionBgColor={topic.bg_color} title={topic.title} />
+          <Splash sectionBgColor={topic.color} title={topic.title} />
           <Description description={topic.description} />
           {/*<MoreContents data={topics} canReplace={true} />*/}
           <BackButton />

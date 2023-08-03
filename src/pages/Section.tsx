@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import { BackButton } from '../components/buttons/BackButton';
+import { BackButton } from '../components/shared/buttons/BackButton';
 import { MoreContents } from '../components/contents/MoreContents';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';

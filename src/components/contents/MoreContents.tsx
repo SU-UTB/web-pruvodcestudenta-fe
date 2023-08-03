@@ -3,7 +3,7 @@ import 'swiper/css';
 
 import { IContent } from '../../lib/interfaces/IContent';
 import { SectionCard } from '../sectionCard/SectionCard';
-import { MoreContentsTitle } from './MoreContentsTitle';
+import { SecondaryTitle } from '../shared/titles/SecondaryTitle';
 import { MoreContentsWrapper } from './MoreContentsWrapper.styled';
 import '../../styles/swiper-custom.css';
 
@@ -13,9 +13,11 @@ interface IContentsData<T extends IContent> {
 }
 
 export const MoreContents = ({ data, canReplace }: IContentsData<IContent>) => {
+  console.log(data)
+
   return (
     <MoreContentsWrapper>
-      <MoreContentsTitle title="Další" />
+      <SecondaryTitle title="Další" />
       <Swiper
         spaceBetween={120}
         width={800}
@@ -28,7 +30,6 @@ export const MoreContents = ({ data, canReplace }: IContentsData<IContent>) => {
         {data.map((c, i) => (
           <SwiperSlide key={i}>
             <SectionCard
-              key={i.toString()}
               id={c.id}
               title={c.title}
               prefix={'detail'}

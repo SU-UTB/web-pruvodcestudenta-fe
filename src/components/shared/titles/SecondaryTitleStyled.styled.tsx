@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MoreContentsTitleWrapper = styled.h6`
+export const SecondaryTitleStyled = styled.h6`
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
