@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MoreContentsGridWrapper = styled.div`
+export const TopicsGridWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
