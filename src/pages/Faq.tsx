@@ -1,6 +1,4 @@
 const Faq = () => {
-  return (
-    <h2>Faq</h2>
-  )
-}
-export default Faq
+  return <h2>Faq</h2>;
+};
+export default Faq;

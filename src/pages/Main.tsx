@@ -1,7 +1,7 @@
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
-import { SectionWrapper } from '../components/main/section/SectionWrapper';
 import { RectorSection } from '../components/main/rector/RectorSection';
+import { SectionWrapper } from '../components/main/section/SectionWrapper';
 import { Splash } from '../components/main/splash/Splash';
 import useFetchLanding from '../hooks/useFetchLanding';
 
