@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const SplashWrapper = styled.section`
-  height: 240px;
-  background-color: #ff9f63;
+  height: 300px;
+  background: url('./utb-rektorat.webp'), rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import { Socials } from '../../socials/Socials';
 import { headerLinks } from './Header.content';
@@ -10,23 +10,19 @@ import {
   LogoHamburgerWrapper,
 } from './Header.styled';
 
-import { useState } from 'react';
-import utb from '../../../assets/icons/utb.svg';
+import utbMini from '../../../assets/icons/utb-mini-logo.svg';
+import { APP_NAME } from '../../../lib/constants';
 import HamburgerButton from './hamburger/HamburgerButton';
 
-const AppName = 'Průvodce studenta';
-
 const Header = () => {
-  const navigate = useNavigate();
-
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <HeaderWrapper>
       <LogoHamburgerWrapper>
-        <AppLogo onClick={() => navigate('/')}>
-          <img src={utb} alt="utb_logo" />
-          {AppName}
+        <AppLogo href="/">
+          {APP_NAME}
+          <img height={18} src={utbMini} alt="utb_logo" />
         </AppLogo>
         <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </LogoHamburgerWrapper>

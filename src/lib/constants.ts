@@ -5,3 +5,5 @@ export const API_TEST_URL: string = 'http://localhost/api';
 export const SECTIONS: string = 'pages/sections';
 export const TOPICS: string = 'pages/topics';
 export const PAGES_LANDING: string = 'pages/landing';
+
+export const APP_NAME: string = 'Průvodce studenta';

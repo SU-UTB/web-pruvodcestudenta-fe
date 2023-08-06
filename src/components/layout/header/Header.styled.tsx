@@ -49,11 +49,17 @@ export const LinksWrapper = styled.div<LinksWrapperProps>`
   }
 `;
 
-export const AppLogo = styled.div`
+export const AppLogo = styled.a`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   cursor: pointer;
-  gap: 0 30px;
+  gap: 6px;
+  text-decoration: none;
+  color: black;
+
+  img {
+    max-width: fit-content;
+  }
 `;
 
 export const LogoHamburgerWrapper = styled.div`
