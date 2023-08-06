@@ -1,39 +1,30 @@
+import { useState } from 'react';
+
+import useDebounce from '../../../../hooks/useDebounce';
 import { SearchInput } from './SearchInput.styled';
-import { SearchInputForm } from './SearchInputForm.styled';
+import { SearchInputWrapper } from './SearchInputWrapper.styled';
+import SearchResultList from './SearchResultList';
 import { SearchWrapper } from './SearchSectionWrapper.styled';
 import FilterButton from './filterButton/FilterButton';
 import SearchButton from './searchButton/SearchButton';
 
-const pickedTags = [
-  'Univerzitní svět',
-  'Život ve Zlíně',
-  'Technické záležitosti',
-  'Univerzitní služby',
-  'Praktické rady',
-  'Další...',
-];
+export const SearchSection = () => {
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const debouncedValue = useDebounce(searchQuery, 1000);
 
-interface Props {
-  handleSubmit: () => void;
-  value: string;
-  setValue: (value: string) => void;
-}
-
-export const SearchSection = ({ value, setValue, handleSubmit }: Props) => {
   return (
     <SearchWrapper>
       <FilterButton />
-      <SearchInputForm onSubmit={handleSubmit}>
+      <SearchInputWrapper>
         <SearchInput
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           type="text"
-          placeholder="Hledat"
+          placeholder="Hledat - například kafe, jídlo, ..."
         />
         <SearchButton />
-      </SearchInputForm>
-      {/* TODO: Put searchtags into the filter (filter modal) */}
-      {/* <Tags pickedTags={tags} /> */}
+      </SearchInputWrapper>
+      {searchQuery && <SearchResultList searchTerm={debouncedValue} />}
     </SearchWrapper>
   );
 };
