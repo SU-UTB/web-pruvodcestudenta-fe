@@ -4,7 +4,7 @@ import { SplashWrapper } from './SplashWrapper.styled';
 
 export const Splash = () => (
   <SplashWrapper>
-    <SplashH1>Průvodce studenta splash screen</SplashH1>
+    <SplashH1>Průvodce studenta</SplashH1>
     <p>
       Průvodce studenta UTB ti rychle pomůže zorientovat se na nové vysoké
       škole.

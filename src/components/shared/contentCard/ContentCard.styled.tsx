@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import orangeImg from '../../assets/images/tables/orange.svg';
-
-interface SectionCardWrapperProps {
+interface ContentCardWrapperProps {
   bgColor?: string;
+  width?: number;
 }
 
-export const SectionCardWrapper = styled.div<SectionCardWrapperProps>`
-  width: 258px;
+export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
+  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : '100%')};
+  padding-top: ${({ width }) => (typeof width === 'number' ? 0 : '100%')};
   height: 258px;
   border-radius: 8px;
   display: flex;
@@ -16,12 +16,11 @@ export const SectionCardWrapper = styled.div<SectionCardWrapperProps>`
   justify-content: end;
   align-items: center;
   background: ${({ bgColor }) => bgColor || '#ffdec9'};
-    no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
 `;
 
-export const SectionCardHeadline = styled.h4`
+export const ContentCardHeadline = styled.h4`
   font-size: 20px;
   padding: 16px 12px;
   text-align: center;

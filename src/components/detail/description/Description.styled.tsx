@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DescriptionWrapper = styled.section`
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 48px auto;
   display: flex;
   justify-content: center;
@@ -16,6 +16,6 @@ export const DescriptionWrapper = styled.section`
 `;
 
 export const DescriptionContent = styled.article`
-  text-align: center;
+  text-align: left;
   width: 100%;
 `;

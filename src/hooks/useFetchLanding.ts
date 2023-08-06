@@ -1,17 +1,15 @@
 import { useContext, useEffect, useState } from 'react';
 
 import { api } from '../configs/api';
+import { SectionListContext } from '../contexts/SectionListContext';
 import { PAGES_LANDING } from '../lib/constants';
 import { ILanding } from '../lib/interfaces/ILanding';
-import { SectionListContext } from '../contexts/SectionListContext';
 
 const useFetchLanding = () => {
   const [data, setData] = useState<ILanding>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [sectonList, setSectionList] = useContext(
-    SectionListContext,
-  );
+  const [sectonList, setSectionList] = useContext(SectionListContext);
 
   useEffect(() => {
     if (sectonList.length !== 0) {
