@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { BackButton } from '../components/shared/buttons/BackButton';
 import { Description } from '../components/detail/description/Description';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { SectionSplash } from '../components/section/splash/SectionSplash';
+import { BackButton } from '../components/shared/buttons/BackButton';
 import useFetchTopic from '../hooks/section/useFetchTopic';
 
 const TopicDetail = () => {
@@ -17,7 +17,6 @@ const TopicDetail = () => {
         <>
           <SectionSplash sectionBgColor={topic.color} title={topic.title} />
           <Description description={topic.description} />
-          {/*<MoreContents data={topics} canReplace={true} />*/}
           <BackButton />
         </>
       )}

@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 
-import { BackButton } from '../components/shared/buttons/BackButton';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { Description } from '../components/section/description/Description';
 import { SectionSplash } from '../components/section/splash/SectionSplash';
-import useFetchSection from '../hooks/section/useFetchSection';
+import { BackButton } from '../components/shared/buttons/BackButton';
 import { CardSlider } from '../components/shared/cardSlider/CardSlider';
+import useFetchSection from '../hooks/section/useFetchSection';
 
 const Section = () => {
   const { id = '0' } = useParams();
@@ -19,7 +19,7 @@ const Section = () => {
         <>
           <SectionSplash sectionBgColor={section.color} title={section.title} />
           <Description description={section.description} />
-          <CardSlider title='Témy' contentCards={section.topics} prefix='detail' />
+          <CardSlider contentCards={section.topics} prefix="detail" />
           <BackButton />
         </>
       )}

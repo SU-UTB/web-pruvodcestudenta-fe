@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import orangeImg from '../../assets/images/tables/orange.svg';
-
 interface ContentCardWrapperProps {
   bgColor?: string;
+  width?: number;
 }
 
 export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
-  width: 258px;
+  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : '100%')};
+  padding-top: ${({ width }) => (typeof width === 'number' ? 0 : '100%')};
   height: 258px;
   border-radius: 8px;
   display: flex;
@@ -16,7 +16,6 @@ export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
   justify-content: end;
   align-items: center;
   background: ${({ bgColor }) => bgColor || '#ffdec9'};
-    no-repeat center;
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
 `;

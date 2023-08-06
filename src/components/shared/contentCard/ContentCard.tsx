@@ -1,11 +1,8 @@
-import { motion } from 'framer-motion';
-
 import {
   ContentCardHeadline,
   ContentCardWrapper,
   StyledLink,
 } from './ContentCard.styled';
-
 
 export interface IContentCardProps {
   prefix: string;
@@ -13,6 +10,7 @@ export interface IContentCardProps {
   title: string;
   canReplace?: boolean;
   color?: string;
+  width?: number;
 }
 
 export const ContentCard = ({
@@ -21,14 +19,13 @@ export const ContentCard = ({
   id,
   canReplace,
   color,
+  width,
 }: IContentCardProps) => {
   return (
-    <motion.div layout>
-      <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
-        <ContentCardWrapper bgColor={color}>
-          <ContentCardHeadline>{title}</ContentCardHeadline>
-        </ContentCardWrapper>
-      </StyledLink>
-    </motion.div>
+    <StyledLink to={`${prefix}/${id}`} replace={canReplace}>
+      <ContentCardWrapper width={width} bgColor={color}>
+        <ContentCardHeadline>{title}</ContentCardHeadline>
+      </ContentCardWrapper>
+    </StyledLink>
   );
 };

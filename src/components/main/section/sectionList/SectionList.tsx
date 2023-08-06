@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 import { ISection } from '../../../../lib/interfaces/ISection';
+import { ContentCard } from '../../../shared/contentCard/ContentCard';
 import { SectionListWrapper } from './SectionListWrapper.styled';
 import { SectionHeader } from './header/SectionHeader';
-import { ContentCard } from '../../../shared/contentCard/ContentCard';
 
 interface Props {
   sectionList: ISection[];
@@ -22,6 +22,7 @@ export const SectionList = ({ sectionList }: Props) => {
               title={title}
               prefix="sekce"
               color={color}
+              width={258}
             />
           ))}
         </SectionListWrapper>
