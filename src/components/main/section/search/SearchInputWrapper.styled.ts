@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchInputForm = styled.form`
+export const SearchInputWrapper = styled.div`
   margin-bottom: 36px;
   border-radius: 47px;
   border: 0.5px solid #c1c1c1;
