@@ -5,7 +5,7 @@ import { API_ROUTE_SEARCH } from '../lib/constants';
 import { IContent } from '../lib/interfaces/IContent';
 
 const useFetchSearchResults = (searchQuery: string) => {
-  const [data, setData] = useState<IContent>();
+  const [data, setData] = useState<IContent[]>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

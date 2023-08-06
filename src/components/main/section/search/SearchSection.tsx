@@ -10,7 +10,7 @@ import SearchButton from './searchButton/SearchButton';
 
 export const SearchSection = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const debouncedValue = useDebounce(searchQuery, 1000);
+  const debouncedValue = useDebounce(searchQuery);
 
   return (
     <SearchWrapper>
@@ -24,7 +24,7 @@ export const SearchSection = () => {
         />
         <SearchButton />
       </SearchInputWrapper>
-      {searchQuery && <SearchResultList searchTerm={debouncedValue} />}
+      {debouncedValue && <SearchResultList searchTerm={debouncedValue} />}
     </SearchWrapper>
   );
 };
