@@ -1,9 +1,12 @@
 import { IContent } from '../../../../lib/interfaces/IContent';
 
-type SearchResultItemProps = Pick<IContent, 'id' | 'title'>;
-
-const SearchResultItem = ({ id, title }: SearchResultItemProps) => {
-  return <a href={`detail/${id}`}>{title}</a>;
+const SearchResultItem = ({
+  title,
+  slug,
+  sectionSlug,
+  color,
+}: ISearchTopic) => {
+  return <a href={`/${sectionSlug}/${slug}`}>{title}</a>;
 };
 
 export default SearchResultItem;

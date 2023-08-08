@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 
 import { api } from '../configs/api';
 import { API_ROUTE_SEARCH } from '../lib/constants';
-import { IContent } from '../lib/interfaces/IContent';
 
 const useFetchSearchResults = (searchQuery: string) => {
-  const [data, setData] = useState<IContent[]>();
+  const [data, setData] = useState<ISearchTopic[]>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

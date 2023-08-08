@@ -16,8 +16,14 @@ const SearchResultList = ({ searchTerm }: SearchResultListProps) => {
         <span>Hledaný výraz není v naší databáze</span>
       )}
       {topics &&
-        topics.map(({ id, title }) => (
-          <SearchResultItem key={id} id={id} title={title} />
+        topics.map(({ title, slug, sectionSlug, color }) => (
+          <SearchResultItem
+            key={slug}
+            title={title}
+            slug={slug}
+            sectionSlug={sectionSlug}
+            color={color}
+          />
         ))}
     </SearchResultListWrapper>
   );

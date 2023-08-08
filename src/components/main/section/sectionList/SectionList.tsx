@@ -12,12 +12,11 @@ export const SectionList = ({ sectionList }: Props) => {
     <>
       <SectionHeader />
       <SectionListWrapper>
-        {sectionList.map(({ title, id, color }) => (
+        {sectionList.map(({ title, slug, color }) => (
           <ContentCard
-            key={id}
-            id={id}
+            key={slug}
+            slug={slug}
             title={title}
-            prefix="sekce"
             color={color}
             width={258}
           />
