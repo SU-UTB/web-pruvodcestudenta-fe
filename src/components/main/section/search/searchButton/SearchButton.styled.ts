@@ -10,4 +10,7 @@ export const SearchSubmitButton = styled.button`
   cursor: pointer;
   border: none;
   background: none;
+  &:disabled {
+    cursor: default;
+  }
 `;

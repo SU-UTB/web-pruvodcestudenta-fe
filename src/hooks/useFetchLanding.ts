@@ -28,7 +28,7 @@ const useFetchLanding = () => {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          setError('Unexpected error');
+          setError('Neznámá chyba.');
         }
       } finally {
         setIsLoading(false);

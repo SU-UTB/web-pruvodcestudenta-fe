@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import { IContent } from '../../lib/interfaces/IContent';
 import { api } from '../../configs/api';
 import { TOPICS } from '../../lib/constants';
+import { IContent } from '../../lib/interfaces/IContent';
 
-const useFetchTopic = (id: number) => {
+const useFetchTopic = (slug: string) => {
   const [data, setData] = useState<IContent>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -14,7 +14,7 @@ const useFetchTopic = (id: number) => {
 
     const getData = async () => {
       try {
-        const { data: topic } = await api.get(`${TOPICS}/${id}`);
+        const { data: topic } = await api.get(`${TOPICS}/${slug}`);
         setData(topic);
         setError(null);
       } catch (err) {

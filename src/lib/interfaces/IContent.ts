@@ -1,7 +1,6 @@
 export interface IContent {
-  id: number;
+  slug: string;
   title: string;
-  link: string;
   color: string;
   description: string;
   created_at: string;
