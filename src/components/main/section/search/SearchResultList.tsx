@@ -1,4 +1,5 @@
 import useFetchSearchResults from '../../../../hooks/useFetchSearchResults';
+import { SearchErrorItemStyled } from './SearchErrorItemStyled.styled';
 import SearchResultItem from './SearchResultItem';
 import { SearchResultListWrapper } from './SearchResultListWrapper.styled';
 
@@ -11,9 +12,11 @@ const SearchResultList = ({ searchTerm }: SearchResultListProps) => {
 
   return (
     <SearchResultListWrapper>
-      {error && <span>{error}</span>}
+      {error && <SearchErrorItemStyled>{error}</SearchErrorItemStyled>}
       {topics && topics.length === 0 && (
-        <span>Hledaný výraz není v naší databáze</span>
+        <SearchErrorItemStyled>
+          Hledaný výraz není v naší databáze
+        </SearchErrorItemStyled>
       )}
       {topics &&
         topics.map(({ title, slug, sectionSlug, color }) => (
