@@ -10,7 +10,7 @@ import SearchButton from './searchButton/SearchButton';
 
 export const SearchSection = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const debouncedValue = useDebounce(searchQuery);
+  const debouncedValue = useDebounce(searchQuery.trim());
 
   return (
     <SearchWrapper>
