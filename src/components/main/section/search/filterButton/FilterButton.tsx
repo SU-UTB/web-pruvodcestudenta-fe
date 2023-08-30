@@ -1,8 +1,12 @@
 import { FilterButtonWrapper } from './FilterButtonWrapper.styled';
 
-const FilterButton = () => {
+interface FilterButtonProps {
+  onClick: () => void;
+}
+
+const FilterButton = ({ onClick }: FilterButtonProps) => {
   return (
-    <FilterButtonWrapper title="filtrovat">
+    <FilterButtonWrapper title="filtrovat" onClick={onClick}>
       Filtrovat
       <svg
         width="22"
