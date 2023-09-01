@@ -1,4 +1,4 @@
-import { IContent } from '../../../../lib/interfaces/IContent';
+import { SearchResultItemStyled } from './SearchResultItemStyled.styled';
 
 const SearchResultItem = ({
   title,
@@ -6,7 +6,11 @@ const SearchResultItem = ({
   sectionSlug,
   color,
 }: ISearchTopic) => {
-  return <a href={`/${sectionSlug}/${slug}`}>{title}</a>;
+  return (
+    <SearchResultItemStyled href={`/${sectionSlug}/${slug}`}>
+      {title}
+    </SearchResultItemStyled>
+  );
 };
 
 export default SearchResultItem;
