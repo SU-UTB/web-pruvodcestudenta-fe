@@ -8,10 +8,12 @@ import { SectionList } from './sectionList/SectionList';
 export const SectionWrapper = () => {
   const [sectionList] = useContext(SectionListContext);
 
+  const sortedSectionList = sectionList.sort((a,b) => (a.title > b.title) ? 1 : -1);
+
   return (
     <SectionWrapperStyled>
       <SearchSection />
-      <SectionList sectionList={sectionList} />
+      <SectionList sectionList={sortedSectionList} />
     </SectionWrapperStyled>
   );
 };

@@ -12,6 +12,8 @@ const Section = () => {
   const { sectionSlug = '' } = useParams();
   const { data: section, isLoading } = useFetchSection(sectionSlug);
 
+  const sortedTopics = section?.topics.sort((a,b) => (a.title > b.title) ? 1 : -1);
+
   return (
     <BaseLayout>
       {isLoading && <LoadingSpinner />}
@@ -19,7 +21,7 @@ const Section = () => {
         <>
           <SectionSplash sectionBgColor={section.color} title={section.title} />
           <Description description={section.description} />
-          <CardSlider contentCards={section.topics} />
+          <CardSlider contentCards={sortedTopics} />
           <BackButton />
         </>
       )}
