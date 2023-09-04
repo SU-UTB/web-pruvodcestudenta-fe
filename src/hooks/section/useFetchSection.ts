@@ -14,7 +14,9 @@ const useFetchSection = (slug: string) => {
 
     const getData = async () => {
       try {
-        const { data: section } = await api.get(`${SECTIONS}/${slug}`);
+        const { data: section } = await api.get(`${SECTIONS}/${slug}`, {
+          signal: abortController.signal,
+        });
         setData(section);
         setError(null);
       } catch (err) {

@@ -14,9 +14,15 @@ const useFetchSearchResults = (searchQuery: string) => {
     const getData = async () => {
       try {
         setIsLoading(true);
-        const { data } = await api.post(API_ROUTE_SEARCH, {
-          query: searchQuery,
-        });
+        const { data } = await api.post(
+          API_ROUTE_SEARCH,
+          {
+            query: searchQuery,
+          },
+          {
+            signal: abortController.signal,
+          },
+        );
         setData(data.topics);
         setError(null);
       } catch (err) {
