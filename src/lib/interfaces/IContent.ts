@@ -1,4 +1,5 @@
 export interface IContent {
+  id: string;
   slug: string;
   title: string;
   color: string;
