@@ -6,7 +6,7 @@ import { Splash } from '../components/main/splash/Splash';
 import useFetchLanding from '../hooks/useFetchLanding';
 
 const Main = () => {
-  const { data: landing, isLoading } = useFetchLanding();
+  const { isLoading } = useFetchLanding();
 
   return (
     <BaseLayout>

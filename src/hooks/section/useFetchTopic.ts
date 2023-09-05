@@ -14,7 +14,9 @@ const useFetchTopic = (slug: string) => {
 
     const getData = async () => {
       try {
-        const { data: topic } = await api.get(`${TOPICS}/${slug}`);
+        const { data: topic } = await api.get(`${TOPICS}/${slug}`, {
+          signal: abortController.signal,
+        });
         setData(topic);
         setError(null);
       } catch (err) {
