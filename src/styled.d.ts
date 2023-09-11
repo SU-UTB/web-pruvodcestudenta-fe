@@ -6,5 +6,8 @@ declare module 'styled-components' {
       tablet: string;
       desktop: string;
     };
+    colors: {
+      lightOrange: string;
+    };
   }
 }

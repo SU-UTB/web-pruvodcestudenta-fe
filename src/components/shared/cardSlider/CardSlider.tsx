@@ -12,8 +12,7 @@ import NextButton from './navigation/NextButton';
 import { PrevButton } from './navigation/PrevButton';
 
 interface CardSliderProps {
-  contentCards: IContent[];
-  prefix: string;
+  contentCards?: IContent[];
   canReplace?: boolean;
 }
 
@@ -34,7 +33,6 @@ const sliderBreakpoints = {
 
 export const CardSlider = ({
   contentCards,
-  prefix,
   canReplace = false,
 }: CardSliderProps) => {
   const swiperRef: any = useRef();
@@ -62,13 +60,11 @@ export const CardSlider = ({
         breakpoints={sliderBreakpoints}
       >
         <PrevButton disabled={reachedStart} />
-        {contentCards.map(({ id, title, color }) => (
+        {contentCards?.map(({ id, slug, title, color }) => (
           <SwiperSlide key={id}>
             <ContentCard
-              key={id}
-              id={id}
+              slug={slug}
               title={title}
-              prefix={prefix}
               color={color}
               canReplace={canReplace}
             />

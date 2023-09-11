@@ -2,7 +2,7 @@ import { SearchSubmitButton } from './SearchButton.styled';
 
 const SearchButton = () => {
   return (
-    <SearchSubmitButton title="hledat" type="submit">
+    <SearchSubmitButton disabled title="hledat" type="submit">
       <svg
         width="23"
         height="24"

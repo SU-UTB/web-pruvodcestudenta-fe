@@ -7,8 +7,8 @@ import { BackButton } from '../components/shared/buttons/BackButton';
 import useFetchTopic from '../hooks/section/useFetchTopic';
 
 const TopicDetail = () => {
-  const { detailId = '0' } = useParams();
-  const { data: topic, isLoading } = useFetchTopic(parseInt(detailId));
+  const { topicSlug = '' } = useParams();
+  const { data: topic, isLoading } = useFetchTopic(topicSlug);
 
   return (
     <BaseLayout>

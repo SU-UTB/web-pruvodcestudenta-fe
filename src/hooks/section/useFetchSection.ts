@@ -4,7 +4,7 @@ import { api } from '../../configs/api';
 import { SECTIONS } from '../../lib/constants';
 import { ISection } from '../../lib/interfaces/ISection';
 
-const useFetchSection = (id: number) => {
+const useFetchSection = (slug: string) => {
   const [data, setData] = useState<ISection>();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -14,7 +14,9 @@ const useFetchSection = (id: number) => {
 
     const getData = async () => {
       try {
-        const { data: section } = await api.get(`${SECTIONS}/${id}`);
+        const { data: section } = await api.get(`${SECTIONS}/${slug}`, {
+          signal: abortController.signal,
+        });
         setData(section);
         setError(null);
       } catch (err) {

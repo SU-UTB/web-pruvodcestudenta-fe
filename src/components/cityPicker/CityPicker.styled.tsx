@@ -4,7 +4,7 @@ export const CityPickerWrapper = styled.div`
   width: 400px;
   height: 60px;
   display: none;
-  background-color: #ffcbab;
+  background-color: ${({ theme }) => theme.colors.lightOrange};
   border-radius: 25px;
   color: black;
   position: relative;

@@ -20,7 +20,9 @@ const useFetchLanding = () => {
 
     const getData = async () => {
       try {
-        const { data: landing } = await api.get(PAGES_LANDING);
+        const { data: landing } = await api.get(PAGES_LANDING, {
+          signal: abortController.signal,
+        });
         setData(landing);
         setSectionList(landing.sections);
         setError(null);
@@ -28,7 +30,7 @@ const useFetchLanding = () => {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          setError('Unexpected error');
+          setError('Neznámá chyba.');
         }
       } finally {
         setIsLoading(false);

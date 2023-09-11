@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 import { ISection } from '../../../../lib/interfaces/ISection';
 import { ContentCard } from '../../../shared/contentCard/ContentCard';
 import { SectionListWrapper } from './SectionListWrapper.styled';
@@ -13,20 +11,17 @@ export const SectionList = ({ sectionList }: Props) => {
   return (
     <>
       <SectionHeader />
-      <motion.div layout>
-        <SectionListWrapper>
-          {sectionList.map(({ title, id, color }) => (
-            <ContentCard
-              key={id}
-              id={id}
-              title={title}
-              prefix="sekce"
-              color={color}
-              width={258}
-            />
-          ))}
-        </SectionListWrapper>
-      </motion.div>
+      <SectionListWrapper>
+        {sectionList.map(({ id, title, slug, color }) => (
+          <ContentCard
+            key={id}
+            slug={slug}
+            title={title}
+            color={color}
+            width={258}
+          />
+        ))}
+      </SectionListWrapper>
     </>
   );
 };
