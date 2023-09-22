@@ -6,7 +6,9 @@ export const Description = ({ description }: IDescription) => {
   return (
     <Container>
       <DescriptionWrapper>
-        <DescriptionContent>{description}</DescriptionContent>
+        <DescriptionContent
+          dangerouslySetInnerHTML={{ __html: description ?? '' }}
+        />
       </DescriptionWrapper>
     </Container>
   );
