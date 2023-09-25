@@ -7,7 +7,7 @@ const SearchResultItem = ({
   color,
 }: ISearchTopic) => {
   return (
-    <SearchResultItemStyled href={`/${sectionSlug}/${slug}`}>
+    <SearchResultItemStyled to={`${sectionSlug}/${slug}`}>
       {title}
     </SearchResultItemStyled>
   );
