@@ -25,9 +25,10 @@ const Footer = () => {
         />
       </FooterLinksWrapper>
       <FooterLinksWrapper>
-        {footerLinks.map(({ link, newTab, title }) => (
+        {footerLinks.map(({ link, newTab, title, icon }) => (
           <FooterLink key={link} link={link} newTab={newTab}>
             {title}
+            {icon && <img src={icon} width={20} height={20} alt={title} />}
           </FooterLink>
         ))}
       </FooterLinksWrapper>
