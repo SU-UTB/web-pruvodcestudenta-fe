@@ -24,7 +24,7 @@ const Footer = () => {
         <h4>Aplikace Moje UTB</h4>
         <FooterLinksWrapper>
           {appLinks.map(({ link, img, title }) => (
-            <FooterLink key={link} link={link}>
+            <FooterLink key={link} link={link} newTab>
               <img src={img} alt={title} width={134} height={40} />
             </FooterLink>
           ))}
