@@ -1,5 +1,5 @@
 import { IDescription } from '../../../lib/interfaces/IDescription';
-import { Container } from '../../shared/containers/Container.styled';
+import { Container } from '../containers/Container.styled';
 import { DescriptionContent, DescriptionWrapper } from './Description.styled';
 
 export const Description = ({ description }: IDescription) => {
