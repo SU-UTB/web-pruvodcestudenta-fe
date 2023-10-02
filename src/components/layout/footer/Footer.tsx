@@ -1,8 +1,11 @@
-import { FooterLinksWrapper, FooterWrapper } from './Footer.styled';
+import {
+  FooterAppSection,
+  FooterCopyright,
+  FooterLinksWrapper,
+  FooterWrapper,
+} from './Footer.styled';
 
-import suLogo from '../../../assets/images/su-logo.svg';
-import utbLogo from '../../../assets/images/utb-logo.svg';
-import { footerLinks } from './Footer.content';
+import { appLinks, contributorLinks, footerLinks } from './Footer.content';
 import FooterLink from './footerLink/FooterLink';
 
 const copyrightYear = new Date().getFullYear();
@@ -11,28 +14,30 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterLinksWrapper>
-        <FooterLink
-          image={suLogo}
-          alt="Studentská Unie UTB"
-          link="https://www.su.utb.cz/"
-          newTab={true}
-        />
-        <FooterLink
-          image={utbLogo}
-          alt="Univerzita Tomáše Bati"
-          link="https://www.utb.cz/"
-          newTab={true}
-        />
-      </FooterLinksWrapper>
-      <FooterLinksWrapper>
-        {footerLinks.map(({ link, newTab, title, icon }) => (
-          <FooterLink key={link} link={link} newTab={newTab}>
-            {title}
-            {icon && <img src={icon} width={20} height={20} alt={title} />}
+        {contributorLinks.map(({ link, img, title }) => (
+          <FooterLink key={link} link={link} newTab>
+            <img src={img} alt={title} width={236} height={24} />
           </FooterLink>
         ))}
       </FooterLinksWrapper>
-      <p>©STUDENTSKÁ UNIE UTB, {copyrightYear}</p>
+      <FooterAppSection>
+        <h4>Aplikace Moje UTB</h4>
+        <FooterLinksWrapper>
+          {appLinks.map(({ link, img, title }) => (
+            <FooterLink key={link} link={link}>
+              <img src={img} alt={title} width={134} height={40} />
+            </FooterLink>
+          ))}
+        </FooterLinksWrapper>
+      </FooterAppSection>
+      <FooterLinksWrapper>
+        {footerLinks.map(({ link, title }) => (
+          <FooterLink key={link} link={link} newTab>
+            {title}
+          </FooterLink>
+        ))}
+      </FooterLinksWrapper>
+      <FooterCopyright>©STUDENTSKÁ UNIE UTB, {copyrightYear}</FooterCopyright>
     </FooterWrapper>
   );
 };

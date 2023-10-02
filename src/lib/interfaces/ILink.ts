@@ -1,6 +1,6 @@
 export interface ILink {
   link: string;
   title?: string;
-  icon?: string;
+  img?: string;
   newTab?: boolean;
 }
