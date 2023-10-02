@@ -34,6 +34,7 @@ const Footer = () => {
         {footerLinks.map(({ link, title }) => (
           <FooterLink key={link} link={link} newTab>
             {title}
+            {icon && <img src={icon} width={20} height={20} alt={title} />}
           </FooterLink>
         ))}
       </FooterLinksWrapper>
