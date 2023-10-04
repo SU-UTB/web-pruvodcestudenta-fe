@@ -25,6 +25,7 @@ const useFetchLanding = () => {
         });
         setData(landing);
         setSectionList(landing.sections);
+        console.log(landing.sections);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {

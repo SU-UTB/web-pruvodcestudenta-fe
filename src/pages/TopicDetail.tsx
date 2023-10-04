@@ -15,7 +15,11 @@ const TopicDetail = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && topic && (
         <>
-          <SectionSplash sectionBgColor={topic.color} title={topic.title} />
+          <SectionSplash
+            bgColor={topic.color}
+            bgImg={topic.image}
+            title={topic.title}
+          />
           <Description description={topic.description} />
           <BackButton />
         </>
