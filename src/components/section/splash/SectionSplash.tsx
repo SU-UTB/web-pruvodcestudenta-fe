@@ -2,13 +2,14 @@ import { MainTitle } from '../../shared/titles/MainTitle.styled';
 import { SectionSplashWrapper } from './SectionSplashWrapper.styled';
 
 interface ISplash {
-  sectionBgColor: string;
+  bgColor: string;
   title: string;
+  bgImg?: string;
 }
 
-export const SectionSplash = ({ sectionBgColor, title }: ISplash) => {
+export const SectionSplash = ({ bgColor, bgImg, title }: ISplash) => {
   return (
-    <SectionSplashWrapper backgroundColor={sectionBgColor}>
+    <SectionSplashWrapper bgColor={bgColor} bgImg={bgImg}>
       <MainTitle>{title}</MainTitle>
     </SectionSplashWrapper>
   );

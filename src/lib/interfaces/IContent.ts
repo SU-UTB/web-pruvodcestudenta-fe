@@ -3,6 +3,7 @@ export interface IContent {
   slug: string;
   title: string;
   color: string;
+  image?: string;
   description: string;
   created_at: string;
   updated_at: string;
