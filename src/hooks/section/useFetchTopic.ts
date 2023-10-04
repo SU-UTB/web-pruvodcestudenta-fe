@@ -18,7 +18,6 @@ const useFetchTopic = (slug: string) => {
           signal: abortController.signal,
         });
         setData(topic);
-        console.log(topic);
         setError(null);
       } catch (err) {
         if (err instanceof Error) {
