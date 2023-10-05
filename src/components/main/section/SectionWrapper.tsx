@@ -16,8 +16,6 @@ export const SectionWrapper = () => {
     <SectionWrapperStyled>
       <SearchSection />
       <SectionList sectionList={sortedSectionList} />
-      <SearchSection />
-      <SectionList sectionList={sortedSectionList} />
     </SectionWrapperStyled>
   );
 };

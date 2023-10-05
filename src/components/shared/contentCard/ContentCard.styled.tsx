@@ -25,6 +25,8 @@ export const ContentCardHeadline = styled.h4`
   padding: 16px 12px;
   text-align: center;
   font-weight: 700;
+  background: white;
+  width: 100%;
 `;
 
 export const StyledLink = styled(Link)`

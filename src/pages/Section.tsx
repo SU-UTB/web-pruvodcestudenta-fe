@@ -27,7 +27,10 @@ const Section = () => {
             title={section.title}
           />
           <Description description={section.description} />
-          <CardSlider contentCards={section.topics} prefix="detail" />
+          <CardSlider
+            contentCards={section.topics}
+            sectionColor={section.color}
+          />
           <BackButton />
         </>
       )}
