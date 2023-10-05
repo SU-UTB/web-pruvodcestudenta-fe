@@ -21,7 +21,11 @@ const Section = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && section && (
         <>
-          <SectionSplash sectionBgColor={section.color} title={section.title} />
+          <SectionSplash
+            bgColor={section.color}
+            bgImg={section.image}
+            title={section.title}
+          />
           <Description description={section.description} />
           <CardSlider contentCards={sortedTopics} />
           <BackButton />
