@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom';
 
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
-import { Description } from '../components/section/description/Description';
 import { SectionSplash } from '../components/section/splash/SectionSplash';
 import { BackButton } from '../components/shared/buttons/BackButton';
 import { CardSlider } from '../components/shared/cardSlider/CardSlider';
+import { Description } from '../components/shared/description/Description';
 import useFetchSection from '../hooks/section/useFetchSection';
 
 const Section = () => {
@@ -21,12 +21,13 @@ const Section = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && section && (
         <>
-          <SectionSplash sectionBgColor={section.color} title={section.title} />
-          <Description description={section.description} />
-          <CardSlider
-            contentCards={sortedTopics}
-            sectionColor={section.color}
+          <SectionSplash
+            bgColor={section.color}
+            bgImg={section.image}
+            title={section.title}
           />
+          <Description description={section.description} />
+          <CardSlider contentCards={section.topics} prefix="detail" />
           <BackButton />
         </>
       )}

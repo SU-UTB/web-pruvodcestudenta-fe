@@ -1,12 +1,14 @@
 import { IDescription } from '../../../lib/interfaces/IDescription';
-import { Container } from '../../shared/containers/Container.styled';
+import { Container } from '../containers/Container.styled';
 import { DescriptionContent, DescriptionWrapper } from './Description.styled';
 
 export const Description = ({ description }: IDescription) => {
   return (
     <Container>
       <DescriptionWrapper>
-        <DescriptionContent>{description}</DescriptionContent>
+        <DescriptionContent
+          dangerouslySetInnerHTML={{ __html: description ?? '' }}
+        />
       </DescriptionWrapper>
     </Container>
   );

@@ -13,6 +13,7 @@ import { PrevButton } from './navigation/PrevButton';
 
 interface CardSliderProps {
   contentCards?: IContent[];
+  contentCards?: IContent[];
   canReplace?: boolean;
   sectionColor?: string;
 }

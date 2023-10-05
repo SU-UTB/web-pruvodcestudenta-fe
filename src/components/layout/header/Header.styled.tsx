@@ -6,7 +6,6 @@ interface LinksWrapperProps {
 }
 
 export const HeaderWrapper = styled.header`
-  min-height: 60px;
   max-width: 100%;
   background-color: white;
   display: flex;
@@ -50,6 +49,7 @@ export const LinksWrapper = styled.div<LinksWrapperProps>`
 `;
 
 export const AppLogo = styled.a`
+  padding: 0.75rem 0;
   display: flex;
   flex-direction: column;
   cursor: pointer;

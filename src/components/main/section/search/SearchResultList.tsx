@@ -15,7 +15,7 @@ const SearchResultList = ({ searchTerm }: SearchResultListProps) => {
       {error && <SearchErrorItemStyled>{error}</SearchErrorItemStyled>}
       {topics && topics.length === 0 && (
         <SearchErrorItemStyled>
-          Hledaný výraz není v naší databáze
+          Hledaný výraz není v naší databázi
         </SearchErrorItemStyled>
       )}
       {topics &&

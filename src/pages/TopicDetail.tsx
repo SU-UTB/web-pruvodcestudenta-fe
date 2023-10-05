@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { Description } from '../components/detail/description/Description';
 import { BaseLayout } from '../components/layout/BaseLayout';
 import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { SectionSplash } from '../components/section/splash/SectionSplash';
 import { BackButton } from '../components/shared/buttons/BackButton';
+import { Description } from '../components/shared/description/Description';
 import useFetchTopic from '../hooks/section/useFetchTopic';
 
 const TopicDetail = () => {
@@ -15,7 +15,11 @@ const TopicDetail = () => {
       {isLoading && <LoadingSpinner />}
       {!isLoading && topic && (
         <>
-          <SectionSplash sectionBgColor={topic.color} title={topic.title} />
+          <SectionSplash
+            bgColor={topic.color}
+            bgImg={topic.image}
+            title={topic.title}
+          />
           <Description description={topic.description} />
           <BackButton />
         </>
