@@ -7,4 +7,5 @@ export interface IContent {
   description: string;
   created_at: string;
   updated_at: string;
+  location?: string;
 }

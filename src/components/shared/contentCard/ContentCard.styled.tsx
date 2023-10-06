@@ -27,6 +27,8 @@ export const ContentCardHeadline = styled.h4`
   font-weight: 700;
   background: white;
   width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
 
 export const StyledLink = styled(Link)`
