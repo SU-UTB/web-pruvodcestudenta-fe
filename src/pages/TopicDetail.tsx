@@ -4,7 +4,7 @@ import LoadingSpinner from '../components/loadingSpinner/LoadingSpinner';
 import { SectionSplash } from '../components/section/splash/SectionSplash';
 import { BackButton } from '../components/shared/buttons/BackButton';
 import { Description } from '../components/shared/description/Description';
-import LocationMap from '../components/topic/LocationMap';
+import { LocationMap } from '../components/topic/LocationMap';
 import useFetchTopic from '../hooks/section/useFetchTopic';
 
 const TopicDetail = () => {
