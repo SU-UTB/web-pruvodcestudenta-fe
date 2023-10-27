@@ -18,6 +18,7 @@ export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
   background: ${({ bgColor }) => bgColor || '#ffdec9'};
   filter: drop-shadow(-3px -3px 15px rgba(221, 171, 139, 0.5));
   color: black;
+  position: relative;
 `;
 
 export const ContentCardHeadline = styled.h4`
@@ -29,8 +30,16 @@ export const ContentCardHeadline = styled.h4`
   width: 100%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  justify-self: end;
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+export const ContentCardImg = styled.img`
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 `;
