@@ -18,7 +18,7 @@ export const SectionList = ({ sectionList }: Props) => {
             slug={slug}
             title={title}
             color={color}
-            width={258}
+            width={260}
           />
         ))}
       </SectionListWrapper>
