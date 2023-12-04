@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const RectorImageWrapper = styled.img`
-  width: 90%;
+  width: 100%;
   max-width: 360px;
   height: 30vh;
   object-fit: cover;
@@ -9,7 +9,6 @@ export const RectorImageWrapper = styled.img`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 519px;
-    width: 40%;
     height: 519px;
   }
 `;

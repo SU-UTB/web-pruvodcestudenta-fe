@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { IContent } from '../../../lib/interfaces/IContent';
 import '../../../styles/swiper-custom.css';
@@ -62,13 +63,14 @@ export const CardSlider = ({
         breakpoints={sliderBreakpoints}
       >
         <PrevButton disabled={reachedStart} />
-        {contentCards?.map(({ id, slug, title }) => (
-          <SwiperSlide key={id}>
+        {contentCards?.map(({ slug, title, image }) => (
+          <SwiperSlide key={uuidv4()}>
             <ContentCard
               slug={slug}
               title={title}
               color={sectionColor}
               canReplace={canReplace}
+              image={image}
             />
           </SwiperSlide>
         ))}

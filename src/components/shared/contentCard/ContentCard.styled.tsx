@@ -23,6 +23,7 @@ export const ContentCardBgIcon = styled.div<{ bgColor?: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
 
   img {
     object-fit: contain;
