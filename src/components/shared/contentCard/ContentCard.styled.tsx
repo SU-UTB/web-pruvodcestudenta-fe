@@ -18,29 +18,43 @@ export const ContentCardWrapper = styled.div<ContentCardWrapperProps>`
 
 export const ContentCardBgIcon = styled.div<{ bgColor?: string }>`
   background: ${({ bgColor }) => bgColor || '#ffdec9'};
-  height: 100%;
+  height: 178px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   img {
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 `;
 
-export const ContentCardHeadline = styled.h4`
-  font-size: 20px;
-  padding: 16px 12px;
-  text-align: center;
-  font-weight: 700;
+export const ContentCardHeadline = styled.div`
   background: white;
   width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  justify-self: end;
-  color: black;
+
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    padding: 0 12px;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 `;
 
 export const StyledLink = styled(Link)`

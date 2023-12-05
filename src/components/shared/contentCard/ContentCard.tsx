@@ -12,6 +12,7 @@ export interface IContentCardProps {
   color?: string;
   width?: number;
   image?: string;
+  icon?: string;
 }
 
 export const ContentCard = ({
@@ -21,14 +22,18 @@ export const ContentCard = ({
   color,
   width,
   image,
+  icon,
 }: IContentCardProps) => {
+  const src = image || icon;
   return (
     <StyledLink to={`${slug}`} replace={canReplace}>
       <ContentCardWrapper width={width}>
         <ContentCardBgIcon bgColor={color}>
-          {image && <img src={image} alt={title} width={130} height={100} />}
+          {src && <img src={src} alt={title} loading="lazy" />}
         </ContentCardBgIcon>
-        <ContentCardHeadline>{title}</ContentCardHeadline>
+        <ContentCardHeadline>
+          <h4>{title}</h4>
+        </ContentCardHeadline>
       </ContentCardWrapper>
     </StyledLink>
   );

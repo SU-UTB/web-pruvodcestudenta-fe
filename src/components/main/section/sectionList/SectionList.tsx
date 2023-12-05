@@ -6,19 +6,20 @@ import { SectionHeader } from './header/SectionHeader';
 interface Props {
   sectionList: ISection[];
 }
-// TODO: Change the prefix value once it's updated in routes and backend
+
 export const SectionList = ({ sectionList }: Props) => {
   return (
     <>
       <SectionHeader />
       <SectionListWrapper>
-        {sectionList.map(({ id, title, slug, color }) => (
+        {sectionList.map(({ id, title, slug, color, icon }) => (
           <ContentCard
-            key={id}
+            key={`${slug}-${id}`}
             slug={slug}
             title={title}
             color={color}
             width={260}
+            icon={icon}
           />
         ))}
       </SectionListWrapper>

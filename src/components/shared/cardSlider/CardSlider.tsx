@@ -63,7 +63,7 @@ export const CardSlider = ({
         breakpoints={sliderBreakpoints}
       >
         <PrevButton disabled={reachedStart} />
-        {contentCards?.map(({ slug, title, image }) => (
+        {contentCards?.map(({ slug, title, image, icon }) => (
           <SwiperSlide key={uuidv4()}>
             <ContentCard
               slug={slug}
@@ -71,6 +71,7 @@ export const CardSlider = ({
               color={sectionColor}
               canReplace={canReplace}
               image={image}
+              icon={icon}
             />
           </SwiperSlide>
         ))}
