@@ -1,6 +1,6 @@
 import {
+  ContentCardBgIcon,
   ContentCardHeadline,
-  ContentCardImg,
   ContentCardWrapper,
   StyledLink,
 } from './ContentCard.styled';
@@ -11,6 +11,7 @@ export interface IContentCardProps {
   canReplace?: boolean;
   color?: string;
   width?: number;
+  image?: string;
   icon?: string;
 }
 
@@ -20,15 +21,19 @@ export const ContentCard = ({
   canReplace,
   color,
   width,
+  image,
   icon,
 }: IContentCardProps) => {
+  const src = image || icon;
   return (
     <StyledLink to={`${slug}`} replace={canReplace}>
-      <ContentCardWrapper width={width} bgColor={color}>
-        {icon && (
-          <ContentCardImg src={icon} alt={title} width={130} height={100} />
-        )}
-        <ContentCardHeadline>{title}</ContentCardHeadline>
+      <ContentCardWrapper width={width}>
+        <ContentCardBgIcon bgColor={color}>
+          {src && <img src={src} alt={title} loading="lazy" />}
+        </ContentCardBgIcon>
+        <ContentCardHeadline>
+          <h4>{title}</h4>
+        </ContentCardHeadline>
       </ContentCardWrapper>
     </StyledLink>
   );
