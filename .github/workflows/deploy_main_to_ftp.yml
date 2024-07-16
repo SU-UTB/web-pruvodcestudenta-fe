@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Get latest code
         uses: actions/checkout@v3
-      - run: npm install && npm build
+      - run: npm install && npm run build
 
       - name: Sync files  
         uses: wangyucode/sftp-upload-action@v2.0.2
